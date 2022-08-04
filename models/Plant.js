@@ -20,17 +20,16 @@ Plant.init(
     },
     plant_img: {
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,
     },
     title: {
       type: DataTypes.STRING,
-      allowNull: false, 
+      allowNull: false,
     },
     upkeep: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    
     toxicity: {
       type: DataTypes.STRING,
       allowNull: true,
