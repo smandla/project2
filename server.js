@@ -7,8 +7,8 @@ const routes = require("./controllers");
 const sequelize = require("./config/connection");
 
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
-
-const hbs = exphbs.create();
+const app = express();
+const PORT = process.env.PORT || 3001;
 
 const sess = {
   secret: "Rooting for you is the best website that has been ever made",
@@ -19,24 +19,26 @@ const sess = {
     db: sequelize,
   }),
 };
-const PORT = process.env.PORT || 3001;
 
-const app = express();
 app.use(session(sess));
 
-app.use(express.json);
-app.use(express.urlencoded({ extended: true }));
+const hbs = exphbs.create({});
 
-app.get("/", (req, res) => {
-  console.log("hello");
-  res.send("hello");
-});
-app.use(express.static(path.join(__dirname, "public")));
-app.engine("handlebars", hbs.engine);
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "handlebars");
+app.engine("handlebars", hbs.engine);
+app.use(express.static(path.join(__dirname, "public")));
 
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`Server is now up localhost:${PORT}`));
 });
+
+// app.get("/", (req, res) => {
+//   console.log("hello");
+//   res.send("wdecew");
+// });
+
+// app.listen(PORT, () => console.log("running at 3001 port"));
