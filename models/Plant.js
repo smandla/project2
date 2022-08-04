@@ -24,37 +24,18 @@ Plant.init(
     },
     title: {
       type: DataTypes.STRING,
-      allowNull: false,
-    },
-    toxicity: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
-    indoor: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-    },
-    genus: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false, 
     },
     upkeep: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    color: {
+    
+    toxicity: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
-    bloom_time: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    soil_type: {
+    water: {
       type: DataTypes.STRING,
       allowNull: false,
     },
