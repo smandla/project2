@@ -20,7 +20,7 @@ Plant.init(
     },
     plant_img: {
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,
     },
     title: {
       type: DataTypes.STRING,
@@ -28,17 +28,10 @@ Plant.init(
     },
     toxicity: {
       type: DataTypes.STRING,
-      allowNull: true,
+      // allowNull: true,
     },
-    indoor: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-    },
-    genus: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    name: {
+
+    water: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -46,18 +39,7 @@ Plant.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    color: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    bloom_time: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    soil_type: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
+
     sun_amount: {
       type: DataTypes.STRING,
       allowNull: false,
