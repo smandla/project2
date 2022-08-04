@@ -6,7 +6,6 @@ const withAuth = require("../utils/auth");
 console.log("hello");
 /** Get all plant posts and add to homepage */
 router.get("/", async (req, res) => {
-  //   console.log("wcofe");
   try {
     const plantsData = await Plant.findAll({
       include: [{ all: true }],
@@ -17,7 +16,18 @@ router.get("/", async (req, res) => {
   } catch (error) {
     res.status(500).json(error);
   }
-  //   res.status(200).send("hello");
 });
 
+/** Get By ID but withAuth */
+router.get("/plant/:id", withAuth, async (req, res) => {
+  try {
+    const plantData = await Plant.findByPk(req.params.id, {
+      include: [{ model: Comment }],
+    });
+    const plant = plantData.get({ plain: true });
+    res.status(200).json(plant);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
 module.exports = router;
