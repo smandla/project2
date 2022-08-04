@@ -1,14 +1,20 @@
 const sequelize = require('../config/connection')
-const {Plant} = require('../models')
+const {Plant, User} = require('../models')
 
 const plantSeedData = require('./plantSeedData.json')
 
 const seedDatabase = async () => {
     await sequelize.sync({force: true})
 
+    const users = await User.bulkCreate(userData, {
+        individualHooks: true,
+        returning: true
+    })
+
     for (const plant of plantsSeedData){
         const newPlant = await plant.create({
-            ...plant
+            ...plant,
+            user_id: users[Math.floor(Math.random() * users.length)].id
         })
     }
 
