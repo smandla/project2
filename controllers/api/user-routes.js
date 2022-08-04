@@ -2,14 +2,21 @@ const router = require("express").Router();
 
 const { User } = require("../../models");
 
+router.get("/", (req, res) => {
+  console.log("oiwech");
+  res.send("isdcb");
+});
 /** POST Create a new user */
 router.post("/", async (req, res) => {
+  console.log("hello");
   try {
     const userData = await User.create({
       username: req.body.username,
       password: req.body.password,
     });
+
     const data = userData.get({ plain: true });
+    console.log(data);
     req.session.save(() => {
       req.session.user_id = data.id;
       req.session.user = data.username;
