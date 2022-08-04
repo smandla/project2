@@ -26,20 +26,18 @@ Plant.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    toxicity: {
-      type: DataTypes.STRING,
-      // allowNull: true,
-    },
-
-    water: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
     upkeep: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-
+    toxicity: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    water: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     sun_amount: {
       type: DataTypes.STRING,
       allowNull: false,
