@@ -2,10 +2,6 @@ const router = require("express").Router();
 
 const { User, Plant } = require("../../models");
 
-router.get("/", async (req, res) => {
-  console.log("ccefchello");
-  res.send("hello");
-});
 /** POST Create a new user */
 router.post("/", async (req, res) => {
   console.log("heEIYVGFERVFRllo");
