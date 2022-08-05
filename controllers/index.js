@@ -3,7 +3,6 @@ const router = require("express").Router();
 const apiRoutes = require("./api");
 const homeRoutes = require("./home-routes");
 const userDashboardRoutes = require("./userdashboard-routes");
-// console.log("ekdcnd");
 router.use("/", homeRoutes);
 router.use("/userdashboard", userDashboardRoutes);
 router.use("/api", apiRoutes);
