@@ -6,6 +6,9 @@ const withAuth = require("../utils/auth");
 console.log("hello");
 
 /** TODO: Render plants to homepage */
+router.get("/", (req, res) => {
+  res.render("feed");
+});
 
 router.get("/login", (req, res) => {
   if (req.session.loggedIn) {
