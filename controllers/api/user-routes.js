@@ -1,11 +1,7 @@
 const router = require("express").Router();
 
-const { User } = require("../../models");
+const { User, Plant } = require("../../models");
 
-router.get("/", async (req, res) => {
-  console.log("ccefchello");
-  res.send("hello");
-});
 /** POST Create a new user */
 router.post("/", async (req, res) => {
   console.log("heEIYVGFERVFRllo");
@@ -59,6 +55,23 @@ router.post("/login", async (req, res) => {
         .status(200)
         .json({ user: userData, message: "You are now logged in!" });
     });
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+
+/** Get plants for specific user*/
+router.get("/plants", async (req, res) => {
+  try {
+    const plantsDataByUser = await Plant.findAll({
+      where: {
+        user_id: req.session.user_id,
+      },
+    });
+    const plantsByUser = plantsDataByUser.map((plant) =>
+      plant.get({ plain: true })
+    );
+    res.status(200).json(plantsByUser);
   } catch (error) {
     res.status(500).json(error);
   }

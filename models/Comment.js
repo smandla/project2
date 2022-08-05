@@ -34,10 +34,9 @@ Comment.init(
         len: [1],
       },
     },
-    vote_count: {
+    voteCount: {
       type: DataTypes.INTEGER,
-      allowNull: false,
-      defaultValue: 0
+      defaultValue: 0,
     }
   },
   {
