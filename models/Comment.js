@@ -34,6 +34,10 @@ Comment.init(
         len: [1],
       },
     },
+    voteCount: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+    },
   },
   {
     sequelize,
