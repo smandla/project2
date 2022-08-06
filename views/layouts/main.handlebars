@@ -18,6 +18,28 @@
   Your browser does not support HTML5 video.
 </video>
 
+<div class="content">
+ <header>
+    <h1>The Tech Blog</h1>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/dashboard">Dashboard</a>
+    {{#if loggedIn}}  
+    <button id="logout" class="btn-no-style">Logout</button>
+    {{else}}
+    <a href="/login">Login</a>
+    {{/if}}
+  </nav>
+  </header>
+  <main>
+    <div class="blog">
+      
+      {{{body}}}
+    </div>
+  </main>
+  {{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
   <button id="myBtn" onclick="myFunction()">Pause</button>
 </div>
 
