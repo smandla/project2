@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 
+body {
+    /* background-image: ; */
+  }
   body {
     margin: 0;
     font-family: Arial;
@@ -41,3 +44,4 @@
     background: #ddd;
     color: black;
   }
+  
