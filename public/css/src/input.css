@@ -5,7 +5,6 @@
 * {
   --primary-green: #41a86d;
   --black-opacity: rgba(0, 0, 0, 0.7);
-  /* border: 2px solid red; */
 }
 
 body {
@@ -46,6 +45,7 @@ body {
   background: #ddd;
   color: black;
 }
+
 .main_header {
   position: fixed;
   background: var(--black-opacity);
@@ -181,6 +181,7 @@ button {
   z-index: 1;
 }
 
+
 .plantText {
   min-width: 500px;
   max-width: 500px;
@@ -190,7 +191,7 @@ button {
 }
 
 #figPlant {
-  background-color: #041e21;
+  background-color: #041E21;
   opacity: 75%;
 }
 
@@ -204,3 +205,4 @@ button {
   padding: 6px;
   background-color: #000;
 }
+

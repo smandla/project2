@@ -551,6 +551,7 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+
 .static {
   position: static;
 }
@@ -642,6 +643,7 @@ video {
   line-height: 1rem;
 }
 
+
 * {
   --primary-green: #41a86d;
   --black-opacity: rgba(0, 0, 0, 0.7);
@@ -652,6 +654,13 @@ body {
   margin: 0;
   font-family: Arial;
   font-size: 17px;
+}
+body {
+  /* background-image: ; */
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px
+
 }
 
 #myVideo {
@@ -686,6 +695,7 @@ body {
   background: #ddd;
   color: black;
 }
+
 
 .main_header {
   position: fixed;
@@ -839,12 +849,21 @@ button {
   min-width: 500px;
   max-width: 500px;
   box-sizing: border-box;
+
   background-color: #041e21;
   opacity: 75%;
 }
 
 #figPlant {
   background-color: #041e21;
+
+  background-color: #041E21;
+  opacity: 75%;
+}
+
+#figPlant{
+  background-color: #041E21;
+
   opacity: 75%;
 }
 
@@ -857,4 +876,6 @@ button {
   border-radius: 12px;
   padding: 6px;
   background-color: #000;
+
 }
+
