@@ -67,6 +67,7 @@ router.get("/plants", async (req, res) => {
       where: {
         user_id: req.session.user_id,
       },
+    
     });
     const plantsByUser = plantsDataByUser.map((plant) =>
       plant.get({ plain: true })
