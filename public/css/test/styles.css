@@ -51,6 +51,12 @@ html {
 2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
 */
 
+body {
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
+}
 
 /*
 1. Add the correct height in Firefox.
@@ -545,10 +551,13 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.bg-purple-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(88 28 135 / var(--tw-bg-opacity));
+}
+
 body {
   /* background-image: ; */
-}
-body {
   margin: 0;
   font-family: Arial;
   font-size: 17px
@@ -586,4 +595,4 @@ body {
   background: #ddd;
   color: black;
 }
-  
+

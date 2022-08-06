@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "watch": "nodemon server.js",
-    "build-css": "tailwindcss build public/css/src/styles.css -o public/css/test/styles.css"
+    "build-css": "npx tailwindcss -i ./public/css/src/styles.css -o ./public/css/test/styles.css --watch"
   },
   "repository": {
     "type": "git",
