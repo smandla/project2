@@ -8,7 +8,7 @@ console.log("hello");
 /** TODO: Render plants to homepage */
 router.get("/", (req, res) => {
   console.log(req.session.loggedIn);
-  res.render("feed");
+  res.render("feed", { loggedIn: req.session.loggedIn });
 });
 
 router.get("/login", (req, res) => {

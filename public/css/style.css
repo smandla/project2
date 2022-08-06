@@ -58,11 +58,14 @@ body {
   align-items: center;
 }
 
-nav a {
+nav a,
+.logout_btn {
   color: var(--primary-green);
   padding: 10px;
   font-size: 1.75rem;
   text-decoration: none;
+  background: none;
+  border: none;
   /* margin: 5px; */
 }
 .body {
