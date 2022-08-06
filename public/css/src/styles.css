@@ -3,15 +3,12 @@
 @tailwind utilities;
 
 
-body {
-    /* background-image: ; */
-  }
   body {
     margin: 0;
     font-family: Arial;
     font-size: 17px;
   }
-
+  
   #myVideo {
     position: fixed;
     right: 0;
@@ -19,7 +16,7 @@ body {
     min-width: 100%;
     min-height: 100%;
   }
-
+  
   .content {
     position: fixed;
     bottom: 0;
@@ -29,7 +26,7 @@ body {
     height: 100%;
     padding: 20px;
   }
-
+  
   #myBtn {
     width: 200px;
     font-size: 18px;
@@ -39,7 +36,7 @@ body {
     color: #fff;
     cursor: pointer;
   }
-
+  
   #myBtn:hover {
     background: #ddd;
     color: black;
