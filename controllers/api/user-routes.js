@@ -1,6 +1,6 @@
 const router = require("express").Router();
 
-const { User, Plant } = require("../../models");
+const { User, Plant, Comment, Vote } = require("../../models");
 
 /** POST Create a new user */
 router.post("/", async (req, res) => {
@@ -67,6 +67,12 @@ router.get("/plants", async (req, res) => {
       where: {
         user_id: req.session.user_id,
       },
+      include: [
+        {
+          model: Comment,
+          include: [{ model: Vote }],
+        },
+      ],
     });
     const plantsByUser = plantsDataByUser.map((plant) =>
       plant.get({ plain: true })

@@ -35,19 +35,29 @@ router.post("/:plant_id/addComment", withAuth, async (req, res) => {
     res.status(400).json(error);
   }
 });
-router.post("/:id/votes/addVote", async (req, res) => {
-  console.log(req.body.voted);
-
-  try {
-    const voteData = await Vote.create({
-      voted: req.body.voted,
-      user_id: req.session.user_id,
-      comment_id: req.params.id,
-    });
-    // TODO: somehow update VoteCount in Comment
-    res.status(200).json(voteData);
-  } catch (error) {
-    res.status(400).json(error);
-  }
+router.post("/:id/votes/:vote_id/addVote", async (req, res) => {
+  //TODO: can't vote more than once
+  //TODO: user can't vote for their own comment.
+  // try {
+  //   const userVote = await User.findByPk(req.session.user_id, {
+  //     include: [{ model: Vote }],
+  //   });
+  //   const data = userVote.get({ plain: true });
+  //   console.log(data);
+  //   res.status(200).json(data);
+  // } catch (error) {}
+  // console.log(req.body.voted);
+  // check to see if user has vote for this
+  // try {
+  //   const voteData = await Vote.create({
+  //     voted: req.body.voted,
+  //     user_id: req.session.user_id,
+  //     comment_id: req.params.id,
+  //   });
+  //   // TODO: somehow update VoteCount in Comment
+  //   res.status(200).json(voteData);
+  // } catch (error) {
+  //   res.status(400).json(error);
+  // }
 });
 module.exports = router;

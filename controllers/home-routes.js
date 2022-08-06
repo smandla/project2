@@ -7,6 +7,8 @@ console.log("hello");
 
 /** TODO: Render plants to homepage */
 
+// TODO: Render single plants to details page and show all comments
+
 router.get("/login", (req, res) => {
   if (req.session.loggedIn) {
     res.redirect("/");
