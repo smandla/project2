@@ -67,6 +67,7 @@ router.get("/plants", async (req, res) => {
       where: {
         user_id: req.session.user_id,
       },
+    
     });
     const plantsByUser = plantsDataByUser.map((plant) =>
       plant.get({ plain: true })
@@ -79,6 +80,7 @@ router.get("/plants", async (req, res) => {
 
 /** Logout */
 router.post("/logout", (req, res) => {
+  console.log("hello");
   if (req.session.loggedIn) {
     req.session.destroy(() => {
       res.status(204).end();
