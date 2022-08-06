@@ -52,7 +52,8 @@ body {
   /* background: red; */
   width: 100%;
   left: 0;
-  padding: 20px 0;
+  top: 0;
+  /* padding: 20px 0; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -87,8 +88,8 @@ nav a,
 }
 .forms section {
   /* background: purple; */
-  width: 40%;
-  height: 25%;
+  width: 30%;
+  height: 50%;
   margin: 1rem;
   background: var(--black-opacity);
   padding: 10px;
@@ -181,7 +182,6 @@ button {
   z-index: 1;
 }
 
-
 .plantText {
   min-width: 500px;
   max-width: 500px;
@@ -191,7 +191,7 @@ button {
 }
 
 #figPlant {
-  background-color: #041E21;
+  background-color: #041e21;
   opacity: 75%;
 }
 
@@ -205,4 +205,3 @@ button {
   padding: 6px;
   background-color: #000;
 }
-
