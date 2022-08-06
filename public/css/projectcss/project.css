@@ -686,7 +686,7 @@ body {
   opacity: 75%;
 }
 
-#fig{
+#figPlant{
   background-color: #041E21;
   opacity: 75%;
 }
@@ -696,7 +696,7 @@ body {
   border-top-right-radius: 10px;
 }
 
-.card {
+.cardPlant {
   border-radius: 12px;
   padding: 6px;
   background-color: #000;
