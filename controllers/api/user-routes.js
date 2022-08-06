@@ -79,6 +79,7 @@ router.get("/plants", async (req, res) => {
 
 /** Logout */
 router.post("/logout", (req, res) => {
+  console.log("hello");
   if (req.session.loggedIn) {
     req.session.destroy(() => {
       res.status(204).end();
