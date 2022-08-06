@@ -45,4 +45,9 @@ body {
     color: black;
   }
   
+  .plantText {
+    min-width: 500px;
+    max-width: 500px;
+    box-sizing: border-box;
+  }
  
