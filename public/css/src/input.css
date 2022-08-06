@@ -43,3 +43,27 @@ body {
   background: #ddd;
   color: black;
 }
+
+.plantText {
+  min-width: 500px;
+  max-width: 500px;
+  box-sizing: border-box;
+  background-color: #041E21;
+  opacity: 75%;
+}
+
+#figPlant{
+  background-color: #041E21;
+  opacity: 75%;
+}
+
+.plantimg {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.cardPlant {
+  border-radius: 12px;
+  padding: 6px;
+  background-color: #000;
+}
