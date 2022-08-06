@@ -1,6 +1,6 @@
 const router = require("express").Router();
 
-const { Plant, User, Comment } = require("../../models");
+const { Plant, User, Comment, Vote } = require("../../models");
 
 const withAuth = require("../../utils/auth");
 
@@ -8,7 +8,13 @@ const withAuth = require("../../utils/auth");
 router.get("/", async (req, res) => {
   try {
     const plantsData = await Plant.findAll({
-      include: [{ model: Comment, include: [{ model: Vote }] }],
+      include: [
+        {
+          model: Comment,
+          include: [{ model: Vote }, { model: User, attributes: ["username"] }],
+        },
+        { model: User, attributes: ["username"] },
+      ],
     });
     const plants = plantsData.map((plant) => plant.get({ plain: true }));
     console.log("plants", plants);
