@@ -1,4 +1,4 @@
-const { Plant, User } = require('../models');
+const { Plant } = require('../models');
 
 const plantData = [
     {
@@ -202,7 +202,6 @@ async function seedPlant(){
         individualHooks: true,
     })
 
-    const users = await User.findAll()
     let newPlant;
         newPlant = await Plant.update(
             {

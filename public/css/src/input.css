@@ -47,7 +47,7 @@ body {
 }
 
 .main_header {
-  position: fixed;
+  position: absolute;
   background: var(--black-opacity);
   /* background: red; */
   width: 100%;
@@ -71,8 +71,7 @@ nav a,
 }
 .body {
   /* background-color: red; */
-
-  position: fixed;
+  position: absolute;
   top: 150px;
   width: 100%;
   left: 0;
@@ -205,11 +204,7 @@ button {
   padding: 6px;
   background-color: #000;
 }
-<<<<<<< HEAD
 
-main {
-  position: absolute;
+.plantDiv {
+  overflow-y: scroll;
 }
-
-=======
->>>>>>> 5b16561dc57fe629f0daa90a7557a68ad9df3eda
