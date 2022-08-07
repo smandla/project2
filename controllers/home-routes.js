@@ -7,7 +7,11 @@ console.log("hello");
 
 /** TODO: Render plants to homepage */
 router.get("/", (req, res) => {
-  res.render("feed");
+  const plantData = await Plant.findAll().catch((err) => {
+    res.json(err)
+  })
+  const plants = plantData.map((plant) => plant.get({plain: true}))
+  res.render("feed", {plants});
 });
 
 router.get("/login", (req, res) => {
