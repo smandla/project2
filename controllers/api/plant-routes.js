@@ -24,11 +24,11 @@ router.post("/addPlant", withAuth, async (req, res) => {
     const plantData = await Plant.create({
       title: req.body.title,
       plant_img: req.body.plant_img,
-      upkeep: req.body.upkeep,
-      toxicity: req.body.toxicity,
-      water: req.body.water,
-      sun_amount: req.body.sun_amount,
-      difficulty: req.body.difficulty,
+      upkeep: null,
+      toxicity: null,
+      water: null,
+      sun_amount: null,
+      difficulty: null,
       problem: req.body.problem,
       user_id: req.session.user_id,
     });
