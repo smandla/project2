@@ -27,7 +27,7 @@ Plant.init(
       allowNull: false,
     },
     upkeep: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     toxicity: {

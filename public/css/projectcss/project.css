@@ -662,7 +662,7 @@ body {
 }
 
 .content {
-  position: fixed;
+  position: relative;
   bottom: 0;
   /* background: rgba(0, 0, 0, 0.5); */
   color: #f1f1f1;
@@ -859,6 +859,7 @@ button {
   background-color: #000;
 }
 
+
 .mute,
 .unmute {
   display: none;
@@ -868,3 +869,10 @@ button {
   opacity: 0.7;
   cursor: pointer;
 }
+
+
+main {
+  position: absolute;
+}
+
+
