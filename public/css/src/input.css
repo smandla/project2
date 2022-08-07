@@ -212,9 +212,4 @@ button {
 .audio:hover {
   opacity: 0.7;
   cursor: pointer;
-
-
-.plantDiv {
-  overflow-y: scroll;
-
 }

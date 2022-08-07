@@ -12,13 +12,13 @@
                 <!-- Holds Top Comment label and date-->
                 <div class="block h-fit w-fit">
                     <h3 class="text-md pl-1">Top Comment</h3>
-                    <span class="text-xs pl-1 w-fit h-fit"></span>
+                    <span class="text-xs pl-1 w-fit h-fit">{{createdAt}}</span>
                 </div>
-                <span class="flex text-mdpr-1"><i class="fa-regular fa-heart pt-1 pr-1"></i> 10</span>
+                <span class="flex text-mdpr-1"><i class="fa-regular fa-heart pt-1 pr-1"></i>{{plants[0].comments.voteCount}}</span>
                 <!--Likes Count -->
             </div>
             <div>
-                <span class="block pl-1">{{comments[0].user.username}}: {{comments[0].comment_text}}</span><!--Top Comment -->
+                <span class="block pl-1">{{user.username}}: {{comments[1].comment_text}}</span><!--Top Comment -->
             </div>
         </div> 
     </div>

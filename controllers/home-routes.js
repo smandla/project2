@@ -18,6 +18,8 @@ router.get("/", async (req, res) => {
       ],
     });
     const plants = plantsData.map((plant) => plant.get({ plain: true }));
+    // console.log(plants.comments[0].comment_text)
+    // res.status(200).json(plants)
     res.render("feed", {plants, loggedIn:req.session.loggedIn});
     console.log("plants", plants);
   } catch (error) {
