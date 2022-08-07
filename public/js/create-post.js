@@ -1,14 +1,17 @@
+const { urlencoded } = require("express");
+
 async function newFormHandler(event) {
     event.preventDefault();
   
-    const title = document.querySelector('input[name="post-title"]').value;
-    const post_content = document.querySelector('input[name="post-content"]').value;
+    const title = document.getElementById('plant-text').value;
+    const post_content = document.getElementById('advice-text').value;
   
-    const response = await fetch(`/api/posts`, {
+    const response = await fetch(`/api/plants/addPlant`, {
       method: 'POST',
       body: JSON.stringify({
-        title,
-        post_content
+        title:title,
+        problem:post_content,
+        plant_img:image-url,
       }),
       headers: {
         'Content-Type': 'application/json'
@@ -22,4 +25,4 @@ async function newFormHandler(event) {
     }
   }
   
-  document.querySelector('.new-post-form').addEventListener('submit', newFormHandler);
+  document.getElementById('advice-submit').addEventListener('submit', newFormHandler);
