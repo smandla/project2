@@ -4,26 +4,6 @@ const { Plant, User, Comment, Vote} = require("../../models");
 
 const withAuth = require("../../utils/auth");
 
-/** Get all plant posts and add to homepage */
-router.get("/", async (req, res) => {
-  try {
-    const plantsData = await Plant.findAll({
-      include: [
-        {
-          model: Comment,
-          include: [{ model: Vote }, { model: User, attributes: ["username"] }],
-        },
-        { model: User, attributes: ["username"] },
-      ],
-    });
-    const plants = plantsData.map((plant) => plant.get({ plain: true }));
-    console.log("plants", plants);
-    res.status(200).json(plants);
-  } catch (error) {
-    res.status(500).json(error);
-  }
-});
-
 /** Get By ID but withAuth for Homepage*/
 router.get("/:id", withAuth, async (req, res) => {
   try {

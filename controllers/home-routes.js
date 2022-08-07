@@ -1,12 +1,12 @@
 const router = require("express").Router();
 
-const { Plant, Comment } = require("../models");
+const { Plant, Comment, Vote, User } = require("../models");
 
 const withAuth = require("../utils/auth");
 console.log("hello");
 
 /** TODO: Render plants to homepage */
-router.get("/", (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const plantsData = await Plant.findAll({
       include: [
@@ -19,7 +19,7 @@ router.get("/", (req, res) => {
     });
     const plants = plantsData.map((plant) => plant.get({ plain: true }));
     console.log("plants", plants);
-    res.render("feed", plants);
+    res.render("feed", {plants, loggedIn:req.session.loggedIn});
   } catch (error) {
     res.status(500).json(error);
   }

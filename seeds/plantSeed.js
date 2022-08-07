@@ -1,4 +1,4 @@
-const { Plant } = require('../models');
+const { Plant, User } = require('../models');
 
 const plantData = [
     {
@@ -195,10 +195,56 @@ const plantData = [
         difficulty: 4
     },
 
-
-
-
-    
-
-
 ]
+
+async function seedPlant(){
+    const plants = await Plant.bulkCreate(plantData, {
+        individualHooks: true,
+    })
+
+    const users = await User.findAll()
+    let newPlant;
+        newPlant = await Plant.update(
+            {
+                user_id: users[0].id
+            },
+            {
+                where: {id: [1, 2, 3, 4, 5, 6]}
+            }
+        )
+
+        newPlant = await Plant.update(
+            {
+                user_id: users[1].id
+            },
+            {
+                where: {id: [7, 8, 9, 10, 11, 12]}
+            }
+        )
+         
+        newPlant = await Plant.update(
+            {
+                user_id: users[2].id
+            },
+            {
+                where: {id: [13, 14, 15, 16, 17, 18]}
+            }
+        ) 
+        newPlant = await Plant.update(
+            {
+                user_id: users[3].id
+            },
+            {
+                where: {id: [19, 20, 21, 22, 23, 24]}
+            }
+        )
+    return;
+}
+
+/*  for (const plant of plantSeedData){
+        const newPlant = await Plant.create({
+            ...plant,
+            user_id: users[Math.floor(Math.random() * users.length)].id
+        })
+    } */
+module.exports = seedPlant
