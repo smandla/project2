@@ -1,5 +1,5 @@
 var sound = new Howl({
-  src: ["/images/background_music.mp3"],
+  src: ["/images/background_music1.mp3"],
   autoplay: true,
   loop: true,
   onplay: function () {
