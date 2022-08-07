@@ -1,4 +1,4 @@
-const { Plant } = require('../models');
+const { Plant, User } = require('../models');
 
 const plantData = [
     {
@@ -201,7 +201,7 @@ async function seedPlant(){
     const plants = await Plant.bulkCreate(plantData, {
         individualHooks: true,
     })
-
+    const users = await User.findAll()
     let newPlant;
         newPlant = await Plant.update(
             {
