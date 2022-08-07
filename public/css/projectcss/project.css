@@ -654,7 +654,7 @@ body {
 }
 
 .content {
-  position: fixed;
+  position: relative;
   bottom: 0;
   /* background: rgba(0, 0, 0, 0.5); */
   color: #f1f1f1;
@@ -701,3 +701,11 @@ body {
   padding: 6px;
   background-color: #000;
 }
+
+main {
+  position: absolute;
+}
+
+/* .plantDiv{
+  overflow-y: scroll;
+} */
