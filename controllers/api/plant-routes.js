@@ -4,6 +4,7 @@ const { Plant, User, Comment, Vote} = require("../../models");
 
 const withAuth = require("../../utils/auth");
 
+
 /** Get By ID but withAuth for Homepage*/
 router.get("/:id", withAuth, async (req, res) => {
   try {

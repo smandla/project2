@@ -23,6 +23,7 @@ router.get("/", async (req, res) => {
   } catch (error) {
     res.status(500).json(error);
   }
+
 });
 
 router.get("/login", (req, res) => {

@@ -25,7 +25,7 @@ router.post("/:plant_id/addComment", withAuth, async (req, res) => {
   try {
     const commentData = await Comment.create({
       comment_text: req.body.comment_text,
-      voteCount: req.body.voteCount,
+      voteCount: 0,
       user_id: req.session.user_id,
       plant_id: req.params.plant_id,
     });
