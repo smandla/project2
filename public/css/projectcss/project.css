@@ -858,11 +858,21 @@ button {
   padding: 6px;
   background-color: #000;
 }
-<<<<<<< HEAD
+
+
+.mute,
+.unmute {
+  display: none;
+}
+
+.audio:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
 
 main {
   position: absolute;
 }
 
-=======
->>>>>>> 5b16561dc57fe629f0daa90a7557a68ad9df3eda
+
