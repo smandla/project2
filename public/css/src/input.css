@@ -22,7 +22,7 @@ body {
 }
 
 .content {
-  position: fixed;
+  position: relative;
   bottom: 0;
   /* background: rgba(0, 0, 0, 0.5); */
   color: #f1f1f1;
@@ -47,7 +47,7 @@ body {
 }
 
 .main_header {
-  position: fixed;
+  position: absolute;
   background: var(--black-opacity);
   /* background: red; */
   width: 100%;
@@ -71,8 +71,7 @@ nav a,
 }
 .body {
   /* background-color: red; */
-
-  position: fixed;
+  position: absolute;
   top: 150px;
   width: 100%;
   left: 0;
@@ -204,4 +203,8 @@ button {
   border-radius: 12px;
   padding: 6px;
   background-color: #000;
+}
+
+.plantDiv {
+  overflow-y: scroll;
 }

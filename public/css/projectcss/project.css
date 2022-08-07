@@ -662,7 +662,7 @@ body {
 }
 
 .content {
-  position: fixed;
+  position: relative;
   bottom: 0;
   /* background: rgba(0, 0, 0, 0.5); */
   color: #f1f1f1;
@@ -858,3 +858,11 @@ button {
   padding: 6px;
   background-color: #000;
 }
+<<<<<<< HEAD
+
+main {
+  position: absolute;
+}
+
+=======
+>>>>>>> 5b16561dc57fe629f0daa90a7557a68ad9df3eda
