@@ -4,6 +4,7 @@ const {User, Plant} = require('../models')
 const userData = require('./userData.json')
 const plantSeedData = require('./plantSeed.js')
 const commentSeedData = require('./commentSeed.js')
+const voteSeedData = require("./voteSeed.js")
 
 const seedDatabase = async () => {
     await sequelize.sync({force: true})
@@ -15,6 +16,7 @@ const seedDatabase = async () => {
 
     await plantSeedData();
     await commentSeedData();
+    await voteSeedData();
 
     process.exit(0)
 }
