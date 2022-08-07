@@ -18,12 +18,14 @@ router.get("/", async (req, res) => {
       ],
     });
     const plants = plantsData.map((plant) => plant.get({ plain: true }));
-    res.render("feed", {plants, loggedIn:req.session.loggedIn});
-    console.log("plants", plants);
+    console.log("plants", plants.comments);
+    res.render("feed", { plants, loggedIn: req.session.loggedIn });
   } catch (error) {
     res.status(500).json(error);
   }
-
+});
+router.get("/askAdvice", (req, res) => {
+  res.render("plant-form", { loggedIn: req.session.loggedIn });
 });
 
 router.get("/login", (req, res) => {
