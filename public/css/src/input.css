@@ -216,6 +216,37 @@ button {
   cursor: pointer;
 }
 
+.advice_form {
+  margin: 1rem;
+  background: var(--black-opacity);
+  padding: 10px;
+  border-radius: 1rem;
+  /* display: flex; */
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  background: var(--black-opacity);
+}
+/* .advice_form input {
+  background: rgba(100, 129, 102, 0.5);
+  margin: 10px;
+  width: 95%;
+  border: none;
+  display: flex;
+  border-radius: 8px;
+} */
+.data {
+  /* background: var(--black-opacity); */
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+}
+.userPlant {
+  margin: 1rem;
+}
+
+
 #plantDetails{
   width: 63%;
   height: 95%;
@@ -241,3 +272,4 @@ button {
 .detailHeader {
   font-size: larger;
 }
+

@@ -1,28 +1,30 @@
-const { urlencoded } = require("express");
-
 async function newFormHandler(event) {
-    event.preventDefault();
-  
-    const title = document.getElementById('plant-text').value;
-    const post_content = document.getElementById('advice-text').value;
-  
+  event.preventDefault();
+
+  const title = document.getElementById("plant-text").value;
+  const post_content = document.getElementById("advice-text").value;
+  const image_url = document.getElementById("img-url").value;
+
+  if (title && post_content && image_url) {
+    console.log(title, post_content, image_url);
     const response = await fetch(`/api/plants/addPlant`, {
-      method: 'POST',
+      method: "POST",
       body: JSON.stringify({
-        title:title,
-        problem:post_content,
-        plant_img:image-url,
+        title: title,
+        problem: post_content,
+        plant_img: image_url,
       }),
       headers: {
-        'Content-Type': 'application/json'
-      }
+        "Content-Type": "application/json",
+      },
     });
-  
+    console.log(response);
     if (response.ok) {
-      document.location.replace('/plants');
+      document.location.replace("/");
     } else {
       alert(response.statusText);
     }
   }
-  
-  document.getElementById('advice-submit').addEventListener('submit', newFormHandler);
+}
+let adviceSubmitBtn = document.getElementById("advice-submit");
+adviceSubmitBtn.addEventListener("click", newFormHandler);

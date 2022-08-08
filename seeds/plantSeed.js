@@ -1,6 +1,7 @@
-const { Plant, User } = require('../models');
+const { Plant, User } = require("../models");
 
 const plantData = [
+
     {
         title: 'Snake Plant', 
         upkeep: 'Great for small spaces, and distinctive with leaves that are stiff and sharp. Easy to care for; can be neglected for weeks at a time.',
@@ -92,7 +93,6 @@ const plantData = [
         plant_img: "https://cdn.shopify.com/s/files/1/0059/8835/2052/products/Cast_Iron_Plant_4_FGT_650x.jpg?v=1633113688"
     },
 
-    {
         title: 'Christmas Cactus', 
         upkeep: 'Plants usually bloom mid- to late December. After blooming is finished, prune by pinching or using a sharp knife to cut off several sections. This encourages the plant to branch, creating a fuller plant with more blossoms.',
         toxicity: 'Non-toxic to dogs and cats',
@@ -262,6 +262,7 @@ async function seedPlant(){
             }
         )
     return;
+
 }
 
 /*  for (const plant of plantSeedData){
@@ -270,4 +271,4 @@ async function seedPlant(){
             user_id: users[Math.floor(Math.random() * users.length)].id
         })
     } */
-module.exports = seedPlant
+module.exports = seedPlant;
