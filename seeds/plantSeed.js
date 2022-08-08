@@ -7,7 +7,8 @@ const plantData = [
         toxicity: 'Toxic to humans and even more so to animals if eaten.',
         water: 'Let plant dry out between waterings. Water less frequently during winter',
         sun_amount: 'Indirect',
-        difficulty: 2
+        difficulty: 2,
+        plant_img: "https://www.thespruce.com/thmb/akRDvKeZLPNU1NjRrbkiCrgwZo4=/941x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/snake-plant-care-overview-1902772-04-d3990a1d0e1d4202a824e929abb12fc1-349b52d646f04f31962707a703b94298.jpeg"
     },
     {
         title: 'Peace Lily',
@@ -15,7 +16,8 @@ const plantData = [
         toxicity: 'Can be toxic to pets if eaten',
         water: 'Keep soil moist but do not overwater. Give the leaves a spritz of water occasionally',
         sun_amount: 'Avoid direct afternoon sunlight',
-        difficulty: 5
+        difficulty: 5,
+        plant_img: "https://i.etsystatic.com/15265690/r/il/9c7e6c/1211862072/il_794xN.1211862072_3kuo.jpg"
     },
     {
         title: 'Fiddle Leaf Fig',
@@ -23,7 +25,8 @@ const plantData = [
         toxicity: 'Toxic to dogs, cats and horses if eaten',
         water: 'Water when the top of the soil is somewhat dry. Don not overwater',
         sun_amount: 'Indirect',
-        difficulty: 4
+        difficulty: 4,
+        plant_img: "https://cdn.shopify.com/s/files/1/0059/8835/2052/products/Fiddle_Leaf_Fig_3_FGT_650x.jpg?v=1654093350"
     },
     {
         title: 'Philodendron',
@@ -31,7 +34,8 @@ const plantData = [
         toxicity: 'Toxic to pets and humans if eaten',
         water: 'Water when the top inch of soil is dry. Avoid soggy soil',
         sun_amount: 'Tolerates a wide range of light conditions',
-        difficulty: 4
+        difficulty: 4,
+        plant_img: "https://www.englishgardens.com/wp-content/uploads/House-Plant-Philodendron-1-600x600.jpg"
     },
     {
         title: 'ZZ Plant',
@@ -39,7 +43,8 @@ const plantData = [
         toxicity: 'Toxic to pets and humans if eaten',
         water: 'Water when the top inch of soil is dry. Avoid soggy soil',
         sun_amount: 'Tolerates a wide range of light conditions',
-        difficulty: 4
+        difficulty: 4,
+        plant_img: "https://cdn.shopify.com/s/files/1/2570/3692/products/6in1ZZOverview_1024x1024@2x.jpg?v=1631652524"
     },
     {
         title: 'Pothos',
@@ -47,7 +52,8 @@ const plantData = [
         toxicity: 'Toxic to pets and humans if eaten',
         water: 'Let dry between waterings. Water if leaves droop',
         sun_amount: 'Bright light but not direct sun. Tolerates low light',
-        difficulty: 5
+        difficulty: 5,
+        plant_img: "https://cdn.shopify.com/s/files/1/0062/8532/8445/products/Golden_Pothos_BB_600x600_357b4263-6c75-466d-8c65-31061dc69954.jpg?v=1634736332&width=1000"
     },
     {
         title: 'Majesty Palm',
@@ -55,7 +61,8 @@ const plantData = [
         toxicity: 'Toxic to pets and humans if eaten',
         water: 'Water once a week when the top inch of soil is dry. Don not let soil dry completely',
         sun_amount: 'Avoid direct sunlight, it can cause leaves to brown',
-        difficulty: 5
+        difficulty: 5,
+        plant_img: "http://mobileimages.lowes.com/productimages/c10ff1be-24b1-4315-ad87-bc5aca07db8a/00894215.jpg"
     },
     {
         title: 'Dumb Cane aka Leopard Lily aka Dieffenbachia', 
@@ -63,7 +70,8 @@ const plantData = [
         toxicity: 'Extremely poisonous if eaten. Sap can irritate the skin. Keep well away from pets and children',
         water: 'Water well on a regular schedule when the top 2-3" of soil are dry',
         sun_amount: 'Medium to bright light; direct sun can burn the leaves',
-        difficulty: 7
+        difficulty: 7,
+        plant_img: "https://gardenerspath.com/wp-content/uploads/2021/01/Dieffenbachia-Growing-in-a-Pot-Indoors.jpg"
     },
     {
         title: 'Ficus', 
@@ -71,7 +79,8 @@ const plantData = [
         toxicity: 'Toxic to pets if eaten',
         water: 'need consistent, but moderate watering throughout the growing season, with dry spells in the winter',
         sun_amount: 'Medium to bright light; 65 - 75°F; barely moist soil',
-        difficulty: 4
+        difficulty: 4,
+        plant_img: "https://cdn.shopify.com/s/files/1/0068/4215/5090/t/115/assets/5255f44f733f--Ficus-BenjaminaMidnightGrave-8IN-Grower-336eae_730x.jpg?v=1611596561"
     },
     {
         title: 'Cast-Iron Plant', 
@@ -79,7 +88,8 @@ const plantData = [
         toxicity: 'Entirely Non-Toxic',
         water: 'When its top two inches of soil are dry to the touch.',
         sun_amount: 'Low light; 45 - 85°F; evenly moist soil (barely moist in fall and winter)',
-        difficulty: 2
+        difficulty: 2,
+        plant_img: "https://cdn.shopify.com/s/files/1/0059/8835/2052/products/Cast_Iron_Plant_4_FGT_650x.jpg?v=1633113688"
     },
 
     {
@@ -88,7 +98,8 @@ const plantData = [
         toxicity: 'Non-toxic to dogs and cats',
         water: 'Plan to water every 2-3 weeks, but only water when the top one third of soil feels dry to the touch.',
         sun_amount: 'Medium to bright light with no direct sun; 65 - 80°F; evenly moist soil (barely moist in fall and winter)',
-        difficulty: 3
+        difficulty: 3,
+        plant_img: "https://cdn.mos.cms.futurecdn.net/SZnVkFK5hpCzgC2JGERGJW-1024-80.jpg.webp"
     },
     {
         title: 'Plectranthus aka Swedish Ivy', 
@@ -96,7 +107,8 @@ const plantData = [
         toxicity: 'Non-Toxic',
         water: 'Plectranthus require regular watering to thrive, on average about 1 inch of water per week. Only water once the top inch or two of soil has dried out. Be careful not to overwater. The soil should stay moist but not wet',
         sun_amount: 'Medium light; 50 - 65°F; barely moist soil',
-        difficulty: 5
+        difficulty: 5,
+        plant_img: "https://gardenerspath.com/wp-content/uploads/2022/03/Swedish-Ivy-in-Bloom-Hero.jpg"
     },
     {
         title: 'Christmas Cactus', 
@@ -104,7 +116,8 @@ const plantData = [
         toxicity: 'Non-toxic to dogs and cats',
         water: 'Plan to water every 2-3 weeks, but only water when the top one third of soil feels dry to the touch.',
         sun_amount: 'Medium to bright light with no direct sun; 65 - 80°F; evenly moist soil (barely moist in fall and winter)',
-        difficulty: 3
+        difficulty: 3,
+        plant_img: "https://cdn.mos.cms.futurecdn.net/SZnVkFK5hpCzgC2JGERGJW-1024-80.jpg.webp"
     },
     {
         title: 'Dracaena aka Corn Plant', 
@@ -112,7 +125,8 @@ const plantData = [
         toxicity: 'When ingested, the plant can cause vomiting (occasionally with blood), depression, anorexia, hyper-salivation and, in cats, dilated pupils',
         water: 'Every 10-14 days',
         sun_amount: 'Medium to bright light; 65 - 75°F; barely moist soil',
-        difficulty: 4
+        difficulty: 4,
+        plant_img: "https://cdn.shopify.com/s/files/1/0059/8835/2052/products/Dracaena_Corn_Plant_FGT_1_650x.jpg?v=1612444294"
     },
     {
         title: 'Anthurium aka Flamingo Flower', 
@@ -120,7 +134,8 @@ const plantData = [
         toxicity: 'Toxic to pets and children',
         water: 'roots become waterlogged easily so limit watering to once a week',
         sun_amount: 'Medium to bright light with no direct sun; 65 - 80°F; evenly moist soil (barely moist in fall and winter)',
-        difficulty: 4
+        difficulty: 4,
+        plant_img: "https://bigboyplants.com/wp-content/uploads/2020/05/Anthurium-Care-Guide-1.jpg?ezimgfmt=ng%3Awebp%2Fngcb16%2Frs%3Adevice%2Frscb16-1"
     },
     {
         title: 'Aloe Vera', 
@@ -128,7 +143,8 @@ const plantData = [
         toxicity: 'minor toxicity, some may be allergic',
         water: 'once every two weeks',
         sun_amount: 'Bright light; 65 - 75°F; moderately dry soil',
-        difficulty: 2
+        difficulty: 2,
+        plant_img: "https://media.greg.app/cGxhbnQtZGItcGhvdG9zLzExODk0MzMyMV8yMDUzMTY0NzA5NDI4NTFfOTkyNjI1NzkyNTk1Nzc5OTMzX24uanBn?auto=webp&width=1000&fit=cover&format=pjpg&height=1000&optimize=medium&precrop=1000:1000,smart"
     },
     {
         title: 'Asparagus Fern', 
@@ -136,7 +152,8 @@ const plantData = [
         toxicity: 'Toxic to dogs and cats, especially the berries',
         water: 'Keep soil moist, and water when the top inch of soil feels dry to the touch.',
         sun_amount: 'Medium to bright light; 60 - 75°F; evenly moist soil',
-        difficulty: 5
+        difficulty: 5,
+        plant_img: "https://www.provenwinners.com/sites/provenwinners.com/files/imagecache/500x500/ifa_upload/asparagus_fern_mono.jpg"
     },
     {
         title: 'Peperomia', 
@@ -144,7 +161,8 @@ const plantData = [
         toxicity: 'Non-toxic and cat-friendly',
         water: 'every one to two weeks',
         sun_amount: 'Low to medium light; 60 - 75°F; moderately dry soil',
-        difficulty: 3
+        difficulty: 3,
+        plant_img: "https://www.logees.com/media/catalog/product/cache/088d41982d5ddfc4a0a1e449b5ddd946/p/e/peperomia_prostrata_square.jpg"
     },
     {
         title: 'Chinese Evergreen', 
@@ -152,7 +170,8 @@ const plantData = [
         toxicity: 'Toxic to humans and pets when ingested',
         water: 'once every seven to 10 days in the summer and every two weeks in the winter',
         sun_amount: 'Low to medium light; 60 - 75°F; evenly moist soil',
-        difficulty: 4
+        difficulty: 4,
+        plant_img: "https://www.gardendesign.com/pictures/images/900x705Max/site_3/chinese-evergreen-plant-aglaonema-shutterstock-com_15962.jpg"
     },
     {
         title: 'Parlor Palm', 
@@ -160,7 +179,8 @@ const plantData = [
         toxicity: 'Non-toxic to humans and pets',
         water: 'every 1-2 weeks',
         sun_amount: 'Medium to low light; 55 - 75°F; evenly moist soil',
-        difficulty: 3
+        difficulty: 3,
+        plant_img: "https://cdn.shopify.com/s/files/1/0059/8835/2052/products/Parlor_Palm_1_FGT_650x.jpg?v=1645211847"
     },
     {
         title: 'English Ivy', 
@@ -168,7 +188,8 @@ const plantData = [
         toxicity: 'Toxic to humans and many animals, leaves are more toxic than the berries!',
         water: 'Water ivies thoroughly, then let the soil dry to the touch to a depth of ½ inch before watering again.',
         sun_amount: 'Medium to bright light; 55 - 70°F; average to high humidity; evenly moist soil',
-        difficulty: 5
+        difficulty: 5,
+        plant_img: "https://www.plants.com/images/157642L_20201120-1605903838316.jpg"
     },
     {
         title: 'Spider Plant', 
@@ -176,7 +197,8 @@ const plantData = [
         toxicity: 'Non-toxic to humans and pets',
         water: 'Water your Spider Plant when the top 50% of the soil is dry.',
         sun_amount: 'Medium to bright light; 65 - 75°F; evenly moist soil',
-        difficulty: 6
+        difficulty: 6,
+        plant_img: "https://cdn.shopify.com/s/files/1/0183/3541/products/spider.jpg?v=1643921473"
     },
     {
         title: 'Tradescantia', 
@@ -184,7 +206,8 @@ const plantData = [
         toxicity: 'Non-toxic to humans and pets',
         water: 'Water your Tradescantia when the top 50%-75% of soil is dry.',
         sun_amount: 'Indirect Medium to bright light; 55 - 75°F; moderately dry soil',
-        difficulty: 5
+        difficulty: 5,
+        plant_img: "https://i.etsystatic.com/17296139/r/il/e9ec6a/2578878613/il_fullxfull.2578878613_61eq.jpg"
     },
     {
         title: 'Arrowhead Vine', 
@@ -192,7 +215,8 @@ const plantData = [
         toxicity: 'Toxic to humans and pets',
         water: 'The arrowhead plant should be allowed to dry out between waterings.',
         sun_amount: 'Low to medium light; 60 - 75°F; evenly moist soil, does well in artificial light',
-        difficulty: 4
+        difficulty: 4,
+        plant_img: "https://i.pinimg.com/originals/85/76/ab/8576ab403039c1906e19352b8eec7285.jpg"
     },
 
 ]

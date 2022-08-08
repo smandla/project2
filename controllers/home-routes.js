@@ -19,7 +19,6 @@ router.get("/", async (req, res) => {
     });
     const plants = plantsData.map((plant) => plant.get({ plain: true }));
 
-    // console.log(plants.comments[0].comment_text)
     // res.status(200).json(plants)
     res.render("feed", {plants, loggedIn:req.session.loggedIn});
     console.log("plants", plants);
@@ -30,6 +29,7 @@ router.get("/", async (req, res) => {
 });
 router.get("/askAdvice", (req, res) => {
   res.render("plant-form", { loggedIn: req.session.loggedIn });
+
 });
 
 router.get("/login", (req, res) => {
