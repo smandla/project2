@@ -30,28 +30,35 @@
             </div>
         </div>
         <div id="allComments" class="flex flex-col bg-black mr-6"> <!-- comment section-->
-            <div class="flex justify-between">
+            <div class="flex">
                 <div class="block pr-1">
-                    <span class="detailHeader text-yellow-400">OP: {{user.username}}<br></span> <!--op user -->
+                    <span class="detailHeader text-yellow-400 pl-2 pt-1 justify-between ">OP: {{user.username}}<br></span> <!--op user -->
+                    
+                    <span class="pl-2 pt-1 ">{{problem}}<br></span> <!-- op post comment-->
+
+                    <span class=" pl-2 text-xs ">{{format_date createdAt}}</span>
+                </div>
+            </div>
+            
+            <div class="block">
+                <div>
                     {{#each comments as |comment|}}
-                    <span>{{comment.comment_text}}</span> <!-- op post comment-->
+                        <span class="pl-2">{{comment.user.username}}: </span> <!-- user -->
+                        <span>{{comment.comment_text}}</span> <!-- comment-->
+                    
+                </div>
+                <div class="pl-2 commentbar text-xs border-white">
+                    <span>{{format_date comment.createdAt}}</span> <!-- date posted-->
+                </div>
                     {{/each}}
-                </div>
-                <div>
-                    <span class="flex">{{createdAt}}</span> <!-- date posted-->
-                </div>
             </div>
-            {{#each comment as |comment|}}
-            <div>
-                <div>
-                    <span></span> <!-- user -->
-                    <span></span> <!-- comment-->
-                </div>
-                <div>
-                    <span></span> <!-- date posted-->
-                </div>
+            <div> <!--comment div -->
+                <form>
+                    <input type="text" placeholder="Add Comment" id="comment-sub-text">
+                    <button class="btn btn-primary " id="comment-submit">Post</button>
+                </form>
             </div>
-            {{/each}}
+            
         </div>
     </div>
 </div>

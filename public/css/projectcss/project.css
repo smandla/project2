@@ -632,6 +632,11 @@ video {
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
 .bg-green-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(22 101 52 / var(--tw-bg-opacity));
@@ -1010,6 +1015,10 @@ button {
   font-size: larger;
 }
 
+.commentbar {
+  border-bottom-width: 1px;
+}
+
 .userplantimg {
   /* position: absolute; */
   border-bottom-left-radius: 8px;
@@ -1042,3 +1051,4 @@ button {
   overflow-y: scroll;
   overflow-x: hidden;
 }
+

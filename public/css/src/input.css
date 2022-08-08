@@ -295,6 +295,12 @@ button {
 .detailHeader {
   font-size: larger;
 }
+
+
+.commentbar {
+  border-bottom-width: 1px;
+}
+
 .userplantimg {
   /* position: absolute; */
   border-bottom-left-radius: 8px;
@@ -324,3 +330,4 @@ button {
   overflow-y: scroll;
   overflow-x: hidden;
 }
+
