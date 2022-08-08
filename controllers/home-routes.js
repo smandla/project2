@@ -9,21 +9,14 @@ console.log("hello");
 router.get("/", async (req, res) => {
   try {
     const plantsData = await Plant.findAll({
-      include: [
-        {
-          model: Comment,
-          include: [{ model: Vote }, { model: User, attributes: ["username"] }],
-        },
-        { model: User, attributes: ["username"] },
-      ],
+      include: [{ all: true }],
     });
     const plants = plantsData.map((plant) => plant.get({ plain: true }));
 
     // console.log(plants.comments[0].comment_text)
     // res.status(200).json(plants)
-    res.render("feed", {plants, loggedIn:req.session.loggedIn});
-    console.log("plants", plants);
-
+    console.log("plants", plants.comments);
+    res.render("feed", { plants, loggedIn: req.session.loggedIn });
   } catch (error) {
     res.status(500).json(error);
   }

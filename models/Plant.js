@@ -19,7 +19,7 @@ Plant.init(
       },
     },
     plant_img: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       // allowNull: false,
     },
     title: {
@@ -28,7 +28,7 @@ Plant.init(
     },
     upkeep: {
       type: DataTypes.TEXT,
-      allowNull: false,
+      allowNull: true,
     },
     toxicity: {
       type: DataTypes.STRING,
@@ -36,15 +36,15 @@ Plant.init(
     },
     water: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     sun_amount: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     difficulty: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
       validate: {
         min: 0,
         max: 10,
