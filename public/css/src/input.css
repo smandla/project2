@@ -11,16 +11,39 @@ body {
   margin: 0;
   font-family: Arial;
   font-size: 17px;
+  width: 100%;
+  height: 100%;
 }
 
 #myVideo {
-  position: fixed;
+  position: absolute;
   right: 0;
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
-}
 
+  width: auto;
+
+  height: auto;
+  /* max-height: 100%; */
+  width: 100%;
+}
+@media screen and (min-width: 600px) {
+  #myVideo {
+    /* position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+
+    width: auto;
+
+    height: auto;
+    /* max-height: 100%; 
+    width: 100%; */
+    object-fit: cover;
+  }
+}
 .content {
   position: relative;
   bottom: 0;
@@ -217,8 +240,8 @@ button {
 }
 
 .advice_form {
-  margin: 1rem;
-  background: var(--black-opacity);
+  /* margin: 1rem; */
+  /* background: var(--black-opacity); */
   padding: 10px;
   border-radius: 1rem;
   /* display: flex; */
@@ -226,7 +249,7 @@ button {
   width: 100%;
   margin: 0 auto;
   height: 100%;
-  background: var(--black-opacity);
+  /* background: var(--black-opacity); */
 }
 /* .advice_form input {
   background: rgba(100, 129, 102, 0.5);
@@ -241,20 +264,21 @@ button {
   display: flex;
   width: 90%;
   margin: 0 auto;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .userPlant {
   margin: 1rem;
 }
 
-
-#plantDetails{
+#plantDetails {
   width: 63%;
   height: 95%;
   box-sizing: border-box;
   opacity: 70%;
 }
 
-#allComments{
+#allComments {
   width: 33%;
   height: 95%;
   box-sizing: border-box;
@@ -272,4 +296,15 @@ button {
 .detailHeader {
   font-size: larger;
 }
-
+.userplantimg {
+  /* position: absolute; */
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-radius: 8px;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+.advice {
+  background: var(--black-opacity);
+}

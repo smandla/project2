@@ -9,7 +9,13 @@ console.log("hello");
 router.get("/", async (req, res) => {
   try {
     const plantsData = await Plant.findAll({
-      include: [{ all: true }],
+      include: [
+        {
+          model: Comment,
+          include: [{ model: Vote }, { model: User, attributes: ["username"] }],
+        },
+        { model: User, attributes: ["username"] },
+      ],
     });
     const plants = plantsData.map((plant) => plant.get({ plain: true }));
 
@@ -22,7 +28,6 @@ router.get("/", async (req, res) => {
 });
 router.get("/askAdvice", (req, res) => {
   res.render("plant-form", { loggedIn: req.session.loggedIn });
-
 });
 router.get("/yourplants", withAuth, async (req, res) => {
   console.log(req.sessionu);
@@ -31,6 +36,12 @@ router.get("/yourplants", withAuth, async (req, res) => {
       where: {
         user_id: req.session.user_id,
       },
+      include: [
+        {
+          model: Comment,
+          include: [{ model: Vote }],
+        },
+      ],
     });
     const plantsByUser = plantsDataByUser.map((plant) =>
       plant.get({ plain: true })
