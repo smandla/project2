@@ -14,7 +14,12 @@ async function newCommentHandler(event){
             }
         })
         if (response.ok){
-            document.location.reload("")
+            document.location.reload("/plants/:id")
+        }else{
+            alert(response.statusText)
         }
     }
 }
+
+let comSubmitBtn = document.getElementById("comment-submit")
+comSubmitBtn.addEventListener("click", newCommentHandler)
