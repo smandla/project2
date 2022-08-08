@@ -3,7 +3,7 @@
     <div class="cardPlant flex flex-col border-black box-border w-fit h-fit mb-5"> <!-- card div-->
         <div><!-- div for image and label for the image-->
             <figure class="relative"> 
-                <img class="plantimg" src="https://kahirihome.com/wp-content/uploads/2020/10/image-placeholder-500x500-1-5.jpg" width="500px" length="500px">
+                <img class="plantimg" src="{{plant_img}}" width="500px" height="500px">
                 <figcaption id="figPlant" class="absolute bg-green-800 left-0 bottom-0 pl-1 pr-1">{{title}} <br> {{user.username}}</figcaption>
             </figure>
         </div>
@@ -14,12 +14,15 @@
                     <h3 class="text-md pl-1">Top Comment</h3>
                     <span class="text-xs pl-1 w-fit h-fit">{{createdAt}}</span>
                 </div>
-                <span class="flex text-mdpr-1"><i class="fa-regular fa-heart pt-1 pr-1"></i>{{comments.comment_text}}</span>
+                {{#each comments as |comment|}}
+                <span class="flex text-mdpr-1"><i class="fa-regular fa-heart pt-1 pr-1"></i>{{comment.voteCount}}</span>
+
                 <!--Likes Count -->
             </div>
             <div>
-                {{!-- <span class="block pl-1">{{user.username}}: {{comments.comment_text}}</span><!--Top Comment --> --}}
+                <span class="block pl-1">{{user.username}}: {{comment.comment_text}}</span><!--Top Comment -->
             </div>
+                {{/each}}
         </div> 
     </div>
 </div>
