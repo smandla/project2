@@ -215,3 +215,17 @@ button {
   opacity: 0.7;
   cursor: pointer;
 }
+
+#plantDetails{
+  width: 63%;
+  height: 95%;
+  box-sizing: border-box;
+  opacity: 70%;
+}
+
+#allComments{
+  width: 33%;
+  height: 95%;
+  box-sizing: border-box;
+  opacity: 70%;
+}

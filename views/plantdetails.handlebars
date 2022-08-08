@@ -1,18 +1,32 @@
-<div> <!-- div to move on the dom-->
-    <div> <!-- div holding the two page objects details and comments-->
-    {{#each plant as |plant}}
-        <div> <!-- details with image and plant details-->
+{{#with plantData}}
+<div class="flex"> <!-- div to move on the dom-->
+    <div class="flex justify-between"> <!-- div holding the two page objects details and comments-->
+        <div id="plantDetails" class="flex bg-black ml-6 pb-8"> <!-- details with image and plant details-->
             <figure>
-                <img>
+                <img src="{{plant_img}}" height="500px" width="500px" alt="this is an image of the users plant">
             </figure>
             <div>
-                
-
+                <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, ducimus? Voluptatem veniam fugiat quo. Laboriosam eaque tenetur officiis inventore. Recusandae magnam facere ipsam, expedita labore autem qui corrupti unde dolores.</span> <!--title -->
+                {{#if upkeep}}
+                <span>{{upkeep}}</span> <!--upkeep -->
+                {{/if}}
+                {{#if toxicity}}
+                <span>{{toxicity}}</span> <!--toxicity -->
+                {{/if}}
+                {{#if water}}
+                <span>{{water}}</span> <!-- water    -->
+                {{/if}}
+                {{#if sun_amount}}
+                <span>{{sun_amount}}</span><!-- sun amount-->
+                {{/if}}
+                {{#if difficulty}}
+                <span>{{difficulty}}</span><!-- difficulty-->
+                {{/if}}
             </div>
         </div>
-        <div> <!-- comment section-->
-            
+        <div id="allComments" class="flex bg-black mr-6"> <!-- comment section-->
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus obcaecati provident rerum. Est voluptatem nihil ratione id ut non vero delectus asperiores, harum ipsum deleniti reprehenderit minima facere? Id, perferendis.</span>
         </div>
-    {{/each}}
     </div>
 </div>
+{{/with}}
