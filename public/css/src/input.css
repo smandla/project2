@@ -233,6 +233,9 @@ button {
 #imgdetail {
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
+  height: 500px;
+  width: 500px;
+  opacity: 100%;
 }
 
 .detailHeader {
