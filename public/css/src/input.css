@@ -233,3 +233,12 @@ button {
   display: flex;
   border-radius: 8px;
 } */
+.data {
+  /* background: var(--black-opacity); */
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+}
+.userPlant {
+  margin: 1rem;
+}

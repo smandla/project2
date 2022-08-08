@@ -627,6 +627,10 @@ video {
   justify-content: space-around;
 }
 
+.border {
+  border-width: 1px;
+}
+
 .border-black {
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
@@ -915,3 +919,14 @@ button {
   display: flex;
   border-radius: 8px;
 } */
+
+.data {
+  /* background: var(--black-opacity); */
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.userPlant {
+  margin: 1rem;
+}
