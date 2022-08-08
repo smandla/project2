@@ -1,0 +1,20 @@
+async function newCommentHandler(event){
+    event.preventDefault();
+
+    const comment = document.getElementById('comment-sub-text').value
+    if (comment){
+        const response = await fetch(`/api/comments/:plant_id/addComment`,
+        {
+            method: "POST",
+            body: JSON.stringify({
+                comment_text: comment
+            }),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+        if (response.ok){
+            document.location.reload("")
+        }
+    }
+}

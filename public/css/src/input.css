@@ -273,3 +273,6 @@ button {
   font-size: larger;
 }
 
+.commentbar {
+  border-bottom-width: 1px;
+}

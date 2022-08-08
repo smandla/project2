@@ -3,7 +3,7 @@ const router = require("express").Router();
 const { Plant, Comment, Vote, User } = require("../models");
 
 const withAuth = require("../utils/auth");
-console.log("hello");
+console.log("hello I am no alive and breathing");
 
 /** TODO: Render plants to homepage */
 router.get("/", async (req, res) => {
@@ -31,7 +31,7 @@ router.get("/askAdvice", (req, res) => {
 
 });
 router.get("/yourplants", withAuth, async (req, res) => {
-  console.log(req.sessionu);
+  console.log(req.session);
   try {
     const plantsDataByUser = await Plant.findAll({
       where: {
@@ -59,4 +59,23 @@ router.get("/login", (req, res) => {
   }
   res.render("login");
 });
+
+router.get("/plants/:id", withAuth, async (req, res) => {
+  try {
+    const plantData = await Plant.findByPk(req.params.id, {
+      include: [
+        {
+          model: Comment,
+          include: [{ model: Vote }, { model: User, attributes: ["username"] }],
+        },
+        { model: User, attributes: ["username"] },
+      ],
+    });
+    const plant = plantData.get({ plain: true });
+    // res.status(200).json(plant);
+    res.render("plantdetails", {plant, loggedIn:req.session.loggedIn})
+  } catch (error) {
+    res.status(500).json(error);
+  }
+})
 module.exports = router;
