@@ -1046,8 +1046,7 @@ button {
 
 .plantDiv {
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  display: block;
   justify-content: center;
   top: 113px;
   bottom: 0;
