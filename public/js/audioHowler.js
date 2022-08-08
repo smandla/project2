@@ -4,13 +4,7 @@ var sound = new Howl({
   loop: true,
   volume: 0.2,
   onplay: function () {
-    console.log("PLAYING ... ");
-  },
-  onpause: function () {
-    console.log("PAUSED ... ");
-  },
-  onend: function () {
-    console.log("ENDED ...");
+    console.log("playing...");
   },
 });
 let muteBtnEl = document.querySelector(".mute");

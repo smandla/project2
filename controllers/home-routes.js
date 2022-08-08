@@ -26,9 +26,8 @@ router.get("/", async (req, res) => {
     res.status(500).json(error);
   }
 });
-router.get("/askAdvice", (req, res) => {
+router.get("/askAdvice", withAuth, (req, res) => {
   res.render("plant-form", { loggedIn: req.session.loggedIn });
-
 });
 router.get("/yourplants", withAuth, async (req, res) => {
   console.log(req.session);
@@ -37,6 +36,12 @@ router.get("/yourplants", withAuth, async (req, res) => {
       where: {
         user_id: req.session.user_id,
       },
+      include: [
+        {
+          model: Comment,
+          include: [{ model: Vote }],
+        },
+      ],
     });
     const plantsByUser = plantsDataByUser.map((plant) =>
       plant.get({ plain: true })

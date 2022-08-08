@@ -8,21 +8,35 @@
 }
 
 body {
+  position: absolute;
+  overflow: hidden;
   margin: 0;
   font-family: Arial;
   font-size: 17px;
+  width: 100%;
+  height: 100%;
 }
 
 #myVideo {
-  position: fixed;
+  position: absolute;
   right: 0;
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
-}
 
+  width: auto;
+
+  height: auto;
+  /* max-height: 100%; */
+  width: 100%;
+}
+@media screen and (min-width: 600px) {
+  #myVideo {
+    object-fit: cover;
+  }
+}
 .content {
-  position: relative;
+  position: absolute;
   bottom: 0;
   /* background: rgba(0, 0, 0, 0.5); */
   color: #f1f1f1;
@@ -71,7 +85,7 @@ nav a,
 }
 .body {
   /* background-color: red; */
-  position: absolute;
+  position: relative;
   top: 150px;
   width: 100%;
   left: 0;
@@ -109,6 +123,13 @@ nav a,
   border: none;
   display: flex;
   border-radius: 8px;
+}
+.inputadvice {
+  background: transparent;
+  border: 1px solid white;
+  width: 95%;
+  display: flex;
+  justify-content: center;
 }
 .input span {
   position: relative;
@@ -193,7 +214,8 @@ button {
   background-color: #041e21;
   opacity: 75%;
 }
-
+@media screen and (max-width: 1150px) {
+}
 .plantimg {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -217,8 +239,8 @@ button {
 }
 
 .advice_form {
-  margin: 1rem;
-  background: var(--black-opacity);
+  /* margin: 1rem; */
+  /* background: var(--black-opacity); */
   padding: 10px;
   border-radius: 1rem;
   /* display: flex; */
@@ -226,7 +248,7 @@ button {
   width: 100%;
   margin: 0 auto;
   height: 100%;
-  background: var(--black-opacity);
+  /* background: var(--black-opacity); */
 }
 /* .advice_form input {
   background: rgba(100, 129, 102, 0.5);
@@ -241,20 +263,21 @@ button {
   display: flex;
   width: 90%;
   margin: 0 auto;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .userPlant {
   margin: 1rem;
 }
 
-
-#plantDetails{
+#plantDetails {
   width: 63%;
   height: 95%;
   box-sizing: border-box;
   opacity: 70%;
 }
 
-#allComments{
+#allComments {
   width: 33%;
   height: 95%;
   box-sizing: border-box;
@@ -273,6 +296,38 @@ button {
   font-size: larger;
 }
 
+
 .commentbar {
   border-bottom-width: 1px;
 }
+
+.userplantimg {
+  /* position: absolute; */
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-radius: 8px;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+.advice {
+  /* display: flex; */
+  /* justify-content: center; */
+  background: var(--black-opacity);
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+  color: white;
+}
+.plantDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: 113px;
+  bottom: 0;
+  position: fixed;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
