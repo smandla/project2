@@ -1,0 +1,58 @@
+{{#with plant}}
+<div class="flex"> <!-- div to move on the dom-->
+    <div class="flex justify-between"> <!-- div holding the two page objects details and comments-->
+        <div id="plantDetails" class="flex bg-black ml-6 pb-8"> <!-- details with image and plant details-->
+            <figure class="pl-2 pt-2 pr-2">
+                <img id="imgdetail"src="{{plant_img}}" height="500px" width="500px" alt="this is an image of the users plant">
+            </figure>
+            <div class="pl-2 pt-1">
+                <span></span> <!--title -->
+                {{#if upkeep}}
+                <span class="detailHeader text-yellow-400">Upkeep <br></span>
+                <span>{{upkeep}} <br></span> <!--upkeep -->
+                {{/if}}
+                {{#if toxicity}}
+                <span class="text-yellow-400 detailHeader"> Toxicity <br></span>
+                <span>{{toxicity}}<br></span> <!--toxicity -->
+                {{/if}}
+                {{#if water}}
+                <span class="text-yellow-400 detailHeader">Water <br></span>
+                <span>{{water}}<br></span> <!-- water    -->
+                {{/if}}
+                {{#if sun_amount}}
+                <span class="text-yellow-400 detailHeader">Sun Amount<br></span>
+                <span>{{sun_amount}}<br></span><!-- sun amount-->
+                {{/if}}
+                {{#if difficulty}}
+                <span class="text-yellow-400 detailHeader">Difficulty</span>
+                <span class="text-yellow-400 detailHeader">{{difficulty}}<br></span><!-- difficulty-->
+                {{/if}}
+            </div>
+        </div>
+        <div id="allComments" class="flex flex-col bg-black mr-6"> <!-- comment section-->
+            <div class="flex justify-between">
+                <div class="block pr-1">
+                    <span class="detailHeader text-yellow-400">OP: {{user.username}}<br></span> <!--op user -->
+                    {{#each comments as |comment|}}
+                    <span>{{comment.comment_text}}</span> <!-- op post comment-->
+                    {{/each}}
+                </div>
+                <div>
+                    <span class="flex">{{createdAt}}</span> <!-- date posted-->
+                </div>
+            </div>
+            {{#each comment as |comment|}}
+            <div>
+                <div>
+                    <span></span> <!-- user -->
+                    <span></span> <!-- comment-->
+                </div>
+                <div>
+                    <span></span> <!-- date posted-->
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+{{/with}}
