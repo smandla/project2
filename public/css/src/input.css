@@ -229,3 +229,12 @@ button {
   box-sizing: border-box;
   opacity: 70%;
 }
+
+#imgdetail {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.detailHeader {
+  font-size: larger;
+}
