@@ -12,7 +12,8 @@ router.get("/:id", withAuth, async (req, res) => {
       include: [{ all: true }],
     });
     const plant = plantData.get({ plain: true });
-    res.status(200).json(plant);
+    // res.status(200).json(plant);
+    res.render("plantdetails", {plantData, loggedIn:req.session.loggedIn})
   } catch (error) {
     res.status(500).json(error);
   }
