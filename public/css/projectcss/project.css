@@ -989,6 +989,10 @@ button {
   margin: 1rem;
 }
 
+.userPlant:hover {
+  opacity: 0.7;
+}
+
 #plantDetails {
   width: 63%;
   height: 95%;
@@ -1021,9 +1025,9 @@ button {
 
 .userplantimg {
   /* position: absolute; */
+  border-radius: 8px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
-  border-radius: 8px;
   width: 300px;
   height: 300px;
   -o-object-fit: cover;
@@ -1051,4 +1055,3 @@ button {
   overflow-y: scroll;
   overflow-x: hidden;
 }
-
