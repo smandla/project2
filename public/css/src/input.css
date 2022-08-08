@@ -197,6 +197,8 @@ button {
 .plantimg {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  width: 500px;
+  height: 500px;
 }
 
 .cardPlant {
@@ -213,6 +215,7 @@ button {
   opacity: 0.7;
   cursor: pointer;
 }
+
 .advice_form {
   margin: 1rem;
   background: var(--black-opacity);
@@ -242,3 +245,28 @@ button {
 .userPlant {
   margin: 1rem;
 }
+
+
+#plantDetails{
+  width: 63%;
+  height: 95%;
+  box-sizing: border-box;
+  opacity: 70%;
+}
+
+#allComments{
+  width: 33%;
+  height: 95%;
+  box-sizing: border-box;
+  opacity: 70%;
+}
+
+#imgdetail {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.detailHeader {
+  font-size: larger;
+}
+

@@ -579,6 +579,15 @@ video {
   margin-bottom: 0.5rem;
 }
 
+.ml-6 {
+  margin-left: 1.5rem;
+}
+
+.mr-6 {
+  margin-right: 1.5rem;
+}
+
+
 .box-border {
   box-sizing: border-box;
 }
@@ -641,6 +650,11 @@ video {
   background-color: rgb(22 101 52 / var(--tw-bg-opacity));
 }
 
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .pl-1 {
   padding-left: 0.25rem;
 }
@@ -651,6 +665,22 @@ video {
 
 .pt-1 {
   padding-top: 0.25rem;
+}
+
+.pb-8 {
+  padding-bottom: 2rem;
+}
+
+.pl-2 {
+  padding-left: 0.5rem;
+}
+
+.pt-2 {
+  padding-top: 0.5rem;
+}
+
+.pr-2 {
+  padding-right: 0.5rem;
 }
 
 .text-xs {
@@ -671,6 +701,12 @@ video {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
+
+.text-yellow-400 {
+  --tw-text-opacity: 1;
+  color: rgb(250 204 21 / var(--tw-text-opacity));
+}
+
 
 * {
   --primary-green: #41a86d;
@@ -881,6 +917,8 @@ button {
 .plantimg {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  width: 500px;
+  height: 500px;
 }
 
 .cardPlant {
@@ -898,6 +936,7 @@ button {
   opacity: 0.7;
   cursor: pointer;
 }
+
 
 .advice_form {
   margin: 1rem;
@@ -930,3 +969,27 @@ button {
 .userPlant {
   margin: 1rem;
 }
+
+#plantDetails{
+  width: 63%;
+  height: 95%;
+  box-sizing: border-box;
+  opacity: 70%;
+}
+
+#allComments{
+  width: 33%;
+  height: 95%;
+  box-sizing: border-box;
+  opacity: 70%;
+}
+
+#imgdetail {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.detailHeader {
+  font-size: larger;
+}
+
