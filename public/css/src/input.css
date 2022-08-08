@@ -8,6 +8,8 @@
 }
 
 body {
+  position: absolute;
+  overflow: hidden;
   margin: 0;
   font-family: Arial;
   font-size: 17px;
@@ -30,22 +32,11 @@ body {
 }
 @media screen and (min-width: 600px) {
   #myVideo {
-    /* position: absolute;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-
-    width: auto;
-
-    height: auto;
-    /* max-height: 100%; 
-    width: 100%; */
     object-fit: cover;
   }
 }
 .content {
-  position: relative;
+  position: absolute;
   bottom: 0;
   /* background: rgba(0, 0, 0, 0.5); */
   color: #f1f1f1;
@@ -94,7 +85,7 @@ nav a,
 }
 .body {
   /* background-color: red; */
-  position: absolute;
+  position: relative;
   top: 150px;
   width: 100%;
   left: 0;
@@ -132,6 +123,13 @@ nav a,
   border: none;
   display: flex;
   border-radius: 8px;
+}
+.inputadvice {
+  background: transparent;
+  border: 1px solid white;
+  width: 95%;
+  display: flex;
+  justify-content: center;
 }
 .input span {
   position: relative;
@@ -216,7 +214,8 @@ button {
   background-color: #041e21;
   opacity: 75%;
 }
-
+@media screen and (max-width: 1150px) {
+}
 .plantimg {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -306,5 +305,22 @@ button {
   object-fit: cover;
 }
 .advice {
+  /* display: flex; */
+  /* justify-content: center; */
   background: var(--black-opacity);
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+  color: white;
+}
+.plantDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: 113px;
+  bottom: 0;
+  position: fixed;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }

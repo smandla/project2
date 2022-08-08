@@ -52,7 +52,6 @@ router.post("/addPlant", withAuth, async (req, res) => {
   }
 });
 router.post("/addPlant", withAuth, async (req, res) => {
-  console.log("ineoicneibcgqeryu");
   console.log(
     req.body.title,
     req.body.plant_img,
