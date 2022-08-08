@@ -92,7 +92,7 @@ const plantData = [
         difficulty: 2,
         plant_img: "https://cdn.shopify.com/s/files/1/0059/8835/2052/products/Cast_Iron_Plant_4_FGT_650x.jpg?v=1633113688"
     },
-
+    {
         title: 'Christmas Cactus', 
         upkeep: 'Plants usually bloom mid- to late December. After blooming is finished, prune by pinching or using a sharp knife to cut off several sections. This encourages the plant to branch, creating a fuller plant with more blossoms.',
         toxicity: 'Non-toxic to dogs and cats',
@@ -229,7 +229,8 @@ async function seedPlant(){
     let newPlant;
         newPlant = await Plant.update(
             {
-                user_id: users[0].id
+                user_id: users[0].id,
+                problem: "My plant is the love of my life what else can I do to make it's life better"
             },
             {
                 where: {id: [1, 2, 3, 4, 5, 6]}
@@ -238,7 +239,8 @@ async function seedPlant(){
 
         newPlant = await Plant.update(
             {
-                user_id: users[1].id
+                user_id: users[1].id,
+                problem: "I think my plant is seeing another botanist"
             },
             {
                 where: {id: [7, 8, 9, 10, 11, 12]}
@@ -247,7 +249,8 @@ async function seedPlant(){
          
         newPlant = await Plant.update(
             {
-                user_id: users[2].id
+                user_id: users[2].id,
+                problem: "My plant isn't taking root"
             },
             {
                 where: {id: [13, 14, 15, 16, 17, 18]}
@@ -255,7 +258,8 @@ async function seedPlant(){
         ) 
         newPlant = await Plant.update(
             {
-                user_id: users[3].id
+                user_id: users[3].id,
+                problem: "My plant is so pretty what do you guys think?"
             },
             {
                 where: {id: [19, 20, 21, 22, 23, 24]}

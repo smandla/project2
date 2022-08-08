@@ -9,7 +9,13 @@ console.log("hello");
 router.get("/", async (req, res) => {
   try {
     const plantsData = await Plant.findAll({
-      include: [{ all: true }],
+      include: [
+        {
+          model: Comment,
+          include: [{ model: Vote }, { model: User, attributes: ["username"] }],
+        },
+        { model: User, attributes: ["username"] },
+      ],
     });
     const plants = plantsData.map((plant) => plant.get({ plain: true }));
 

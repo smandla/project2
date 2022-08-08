@@ -12,7 +12,7 @@
                 <!-- Holds Top Comment label and date-->
                 <div class="block h-fit w-fit">
                     <h3 class="text-md pl-1">Top Comment</h3>
-                    <span class="text-xs pl-1 w-fit h-fit">{{createdAt}}</span>
+                    <span class="text-xs pl-1 w-fit h-fit">{{format_date createdAt}}</span>
                 </div>
                 {{#each comments as |comment|}}
                 <span class="flex text-mdpr-1"><i class="fa-regular fa-heart pt-1 pr-1"></i>{{comment.voteCount}}</span>
@@ -20,7 +20,7 @@
                 <!--Likes Count -->
             </div>
             <div>
-                <span class="block pl-1">{{user.username}}: {{comment.comment_text}}</span><!--Top Comment -->
+                <span class="block pl-1">{{comment.user.username}}: {{comment.comment_text}}</span><!--Top Comment -->
             </div>
                 {{/each}}
         </div> 
