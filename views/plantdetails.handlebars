@@ -30,13 +30,15 @@
             </div>
         </div>
         <div id="allComments" class="flex flex-col bg-black mr-6"> <!-- comment section-->
-            <div>
-                <div>
-                    <span></span> <!--op user -->
-                    <span></span> <!-- op post comment-->
+            <div class="flex justify-between">
+                <div class="block pr-1">
+                    <span class="detailHeader text-yellow-400">OP: {{user.username}}<br></span> <!--op user -->
+                    {{#each comments as |comment|}}
+                    <span>{{comment.comment_text}}</span> <!-- op post comment-->
+                    {{/each}}
                 </div>
                 <div>
-                    <span></span> <!-- date posted-->
+                    <span class="flex">{{createdAt}}</span> <!-- date posted-->
                 </div>
             </div>
             {{#each comment as |comment|}}
