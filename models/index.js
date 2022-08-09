@@ -35,7 +35,12 @@ Vote.belongsTo(Comment, {
 Comment.hasMany(Vote, {
   foreignKey: "comment_id",
 });
-
+User.hasMany(Vote, {
+  foreignKey: "user_id",
+});
+Vote.belongsTo(User, {
+  foreignKey: "user_id",
+});
 module.exports = {
   Plant,
   User,

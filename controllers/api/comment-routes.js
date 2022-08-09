@@ -36,16 +36,24 @@ router.post("/:plant_id/addComment", withAuth, async (req, res) => {
   }
 });
 router.post("/:id/votes/addVote", async (req, res) => {
-  console.log(req.body.voted);
-
   try {
-    const voteData = await Vote.create({
-      voted: req.body.voted,
-      user_id: req.session.user_id,
-      comment_id: req.params.id,
+    const dataV = await Vote.findOne({
+      where: {
+        comment_id: req.params.id,
+        user_id: req.session.user_id,
+      },
     });
-    // TODO: somehow update VoteCount in Comment
-    res.status(200).json(voteData);
+    if (!dataV) {
+      const voteData = await Vote.create({
+        voted: req.body.voted,
+        user_id: req.session.user_id,
+        comment_id: req.params.id,
+      });
+      res.status(200).json({ like: true, voteData });
+    } else {
+      const destroyData = await Vote.destroy({ where: dataV.dataValues });
+      res.status(200).json({ like: false, destroyData });
+    }
   } catch (error) {
     res.status(400).json(error);
   }
