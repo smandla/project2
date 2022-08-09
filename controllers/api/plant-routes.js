@@ -26,7 +26,6 @@ router.get("/:id", withAuth, async (req, res) => {
 
 /** POST plant by specific user */
 router.post("/addPlant", withAuth, async (req, res) => {
-
   try {
     const plantData = await Plant.create({
       title: req.body.title,
@@ -43,6 +42,5 @@ router.post("/addPlant", withAuth, async (req, res) => {
   } catch (error) {
     res.status(400).json(error);
   }
-
+});
 module.exports = router;
-
