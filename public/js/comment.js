@@ -1,9 +1,8 @@
 async function commentFormHandler(event) {
+
   event.preventDefault();
 
   const comment_text = document.getElementById("comment-sub-text").value.trim();
-  // const comment_id = document.querySelector(".comment").id;
-  // console.log(comment_id);
   const post_id = window.location.toString().split("/")[
     window.location.toString().split("/").length - 1
   ];

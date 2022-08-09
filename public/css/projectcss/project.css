@@ -619,8 +619,13 @@ video {
   width: fit-content;
 }
 
+
 .w-full {
   width: 100%;
+}
+.w-1\/2 {
+  width: 50%;
+
 }
 
 .flex-col {
@@ -1026,6 +1031,9 @@ input {
 .plantDiv {
   width: 100%;
   display: block;
+
+  /* flex-direction: column; */
+
   justify-content: center;
   top: 113px;
   bottom: 0;
