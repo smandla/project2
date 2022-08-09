@@ -3,7 +3,7 @@ async function newCommentHandler(event){
 
     const comment = document.getElementById('comment-sub-text').value
     if (comment){
-        const response = await fetch(`/api/comments/:plant_id/addComment`,
+        const response = await fetch(`/api/comments/:id/addComment`,
         {
             method: "POST",
             body: JSON.stringify({

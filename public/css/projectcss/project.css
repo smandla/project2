@@ -1014,6 +1014,10 @@ input:focus {
 .plantDiv {
   width: 100%;
   display: block;
+<<<<<<< HEAD
+  /* flex-direction: column; */
+=======
+>>>>>>> 59a8d0dd82452f11b4486627ed2f0691b8e3c6c3
   justify-content: center;
   top: 113px;
   bottom: 0;
