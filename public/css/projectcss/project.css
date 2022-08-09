@@ -1056,3 +1056,38 @@ button {
   overflow-x: hidden;
 }
 
+/* figure img {
+  width: 500px;
+  height: 500px;
+} */
+
+@media screen and (max-width: 768px) {
+  .cardPlant {
+    width: 200px;
+    height: 200px;
+  }
+  .plantDiv {
+    top: auto;
+    bottom: auto;
+  }
+  .plantimg {
+    width: fit-content;
+    height: fit-content;
+  }
+  .plantText {
+    width: fit-content;
+    height: fit-content;
+  }
+  .main_header {
+    position: relative;
+    flex-direction: column;
+  }
+  .content {
+    padding: 0;
+  }
+
+  #myVideo {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}

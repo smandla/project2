@@ -296,7 +296,6 @@ button {
   font-size: larger;
 }
 
-
 .commentbar {
   border-bottom-width: 1px;
 }
@@ -331,3 +330,6 @@ button {
   overflow-x: hidden;
 }
 
+.main {
+  display: flex;
+}
