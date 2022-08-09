@@ -563,12 +563,12 @@ video {
   position: relative;
 }
 
-.left-0 {
-  left: 0px;
-}
-
 .bottom-0 {
   bottom: 0px;
+}
+
+.left-0 {
+  left: 0px;
 }
 
 .mb-5 {
@@ -647,6 +647,10 @@ video {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+
 .pl-1 {
   padding-left: 0.25rem;
 }
@@ -701,7 +705,7 @@ video {
 
 * {
   --primary-green: #41a86d;
-  --black-opacity: rgba(0, 0, 0, 0.7);
+  --black-opacity: rgba(0, 0, 0, 0.8);
 }
 
 body {
@@ -886,41 +890,6 @@ input:focus {
   border: none;
 }
 
-/* button {
-  margin: 25px 0 0 25px;
-} */
-
-.hide {
-  display: none;
-}
-
-.time {
-  text-align: right;
-  position: absolute;
-  top: 3px;
-  right: 10px;
-  left: 0;
-  color: #335fb8;
-  z-index: 2;
-}
-
-.audio-progress {
-  height: 22px;
-  position: relative;
-  margin-top: 15px;
-  background-color: #e5eff1;
-}
-
-#progress {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 100%;
-  background-color: #006182;
-  z-index: 1;
-}
-
 .plantText {
   min-width: 500px;
   max-width: 500px;
@@ -932,9 +901,6 @@ input:focus {
 #figPlant {
   background-color: #041e21;
   opacity: 75%;
-}
-
-@media screen and (max-width: 1150px) {
 }
 
 .plantimg {
@@ -959,28 +925,6 @@ input:focus {
   opacity: 0.7;
   cursor: pointer;
 }
-
-.advice_form {
-  /* margin: 1rem; */
-  /* background: var(--black-opacity); */
-  /* padding: 10px; */
-  /* border-radius: 1rem; */
-  /* display: flex; */
-  /* justify-content: center; */
-  /* width: 100%; */
-  /* margin: 0 auto; */
-  /* height: 100%; */
-  /* background: var(--black-opacity); */
-}
-
-/* .advice_form input {
-  background: rgba(100, 129, 102, 0.5);
-  margin: 10px;
-  width: 95%;
-  border: none;
-  display: flex;
-  border-radius: 8px;
-} */
 
 .data {
   /* background: var(--black-opacity); */
