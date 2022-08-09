@@ -21,13 +21,13 @@ router.get("/:plant_id/comments", withAuth, async (req, res) => {
     res.status(400).json(error);
   }
 });
-router.post("/:plant_id/addComment", withAuth, async (req, res) => {
+router.post("/:id/addComment", withAuth, async (req, res) => {
   try {
     const commentData = await Comment.create({
       comment_text: req.body.comment_text,
       voteCount: 0,
       user_id: req.session.user_id,
-      plant_id: req.params.plant_id,
+      plant_id: req.params.id,
     });
     console.log(commentData);
     res.status(200).json(commentData);
