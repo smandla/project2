@@ -23,7 +23,10 @@ router.get("/", async (req, res) => {
 
     // res.status(200).json(plants)
     console.log("plants", plants);
-    res.render("feed", { plants, loggedIn: req.session.loggedIn });
+    res.render("feed", {
+      plants,
+      loggedIn: req.session.loggedIn,
+    });
   } catch (error) {
     res.status(500).json(error);
   }
@@ -55,6 +58,7 @@ router.get("/yourplants", withAuth, async (req, res) => {
       plantsByUser,
       loggedIn: req.session.loggedIn,
       user_id: req.session.user_id,
+      
     });
     // res.status(200).json(plantsByUser);
   } catch (error) {

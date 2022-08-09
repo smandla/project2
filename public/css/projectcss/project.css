@@ -555,6 +555,10 @@ video {
   position: static;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -569,6 +573,10 @@ video {
 
 .left-0 {
   left: 0px;
+}
+
+.float-right {
+  float: right;
 }
 
 .mb-5 {
@@ -611,8 +619,13 @@ video {
   width: fit-content;
 }
 
+
+.w-full {
+  width: 100%;
+}
 .w-1\/2 {
   width: 50%;
+
 }
 
 .flex-col {
@@ -681,6 +694,10 @@ video {
 
 .pr-2 {
   padding-right: 0.5rem;
+}
+
+.pl-10 {
+  padding-left: 2.5rem;
 }
 
 .text-xs {
@@ -761,10 +778,10 @@ body {
   cursor: pointer;
 }
 
-#myBtn:hover {
+/* #myBtn:hover {
   background: #ddd;
   color: black;
-}
+} */
 
 main {
   position: relative;
@@ -875,10 +892,10 @@ nav a,
   border-radius: 8px;
 }
 
-.btn:hover {
+/* .btn:hover {
   cursor: pointer;
   opacity: 0.7;
-}
+} */
 
 input {
   padding-left: 5px;
@@ -890,9 +907,9 @@ input {
   color: white;
 }
 
-input:focus {
+/* input:focus {
   border: none;
-}
+} */
 
 .plantText {
   min-width: 500px;
@@ -1014,10 +1031,9 @@ input:focus {
 .plantDiv {
   width: 100%;
   display: block;
-<<<<<<< HEAD
+
   /* flex-direction: column; */
-=======
->>>>>>> 59a8d0dd82452f11b4486627ed2f0691b8e3c6c3
+
   justify-content: center;
   top: 113px;
   bottom: 0;
@@ -1035,4 +1051,13 @@ input:focus {
 
 input:focus {
   outline: none;
+}
+
+.block {
+  padding: 10px;
+  margin: 0 10px 10px 0;
+}
+
+.comment_form {
+  margin: 10px;
 }

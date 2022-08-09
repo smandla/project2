@@ -47,6 +47,7 @@ router.post("/login", async (req, res) => {
         .json({ message: "Incorrect username or password. Please try again!" });
       return;
     }
+    console.log(data);
     req.session.save(() => {
       req.session.user_id = data.id;
       req.session.user = data.username;
@@ -67,7 +68,6 @@ router.get("/plants", async (req, res) => {
       where: {
         user_id: req.session.user_id,
       },
-    
     });
     const plantsByUser = plantsDataByUser.map((plant) =>
       plant.get({ plain: true })
