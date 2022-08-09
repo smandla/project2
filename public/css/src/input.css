@@ -55,10 +55,10 @@ body {
   cursor: pointer;
 }
 
-#myBtn:hover {
+/* #myBtn:hover {
   background: #ddd;
   color: black;
-}
+} */
 main {
   position: relative;
   top: 120px;
@@ -158,10 +158,10 @@ nav a,
   font-size: 1.25rem;
   border-radius: 8px;
 }
-.btn:hover {
+/* .btn:hover {
   cursor: pointer;
   opacity: 0.7;
-}
+} */
 input {
   padding-left: 5px;
   border: none;
@@ -171,9 +171,9 @@ input {
   font-size: 1.5rem;
   color: white;
 }
-input:focus {
+/* input:focus {
   border: none;
-}
+} */
 
 .plantText {
   min-width: 500px;
@@ -303,4 +303,12 @@ input:focus {
 }
 input:focus {
   outline: none;
+}
+.block {
+  padding: 10px;
+  margin: 0 10px 10px 0;
+}
+
+.comment_form {
+  margin: 10px;
 }

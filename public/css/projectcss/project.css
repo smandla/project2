@@ -555,6 +555,10 @@ video {
   position: static;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -569,6 +573,10 @@ video {
 
 .left-0 {
   left: 0px;
+}
+
+.float-right {
+  float: right;
 }
 
 .mb-5 {
@@ -609,6 +617,10 @@ video {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .flex-col {
@@ -677,6 +689,10 @@ video {
 
 .pr-2 {
   padding-right: 0.5rem;
+}
+
+.pl-10 {
+  padding-left: 2.5rem;
 }
 
 .text-xs {
@@ -757,10 +773,10 @@ body {
   cursor: pointer;
 }
 
-#myBtn:hover {
+/* #myBtn:hover {
   background: #ddd;
   color: black;
-}
+} */
 
 main {
   position: relative;
@@ -871,10 +887,10 @@ nav a,
   border-radius: 8px;
 }
 
-.btn:hover {
+/* .btn:hover {
   cursor: pointer;
   opacity: 0.7;
-}
+} */
 
 input {
   padding-left: 5px;
@@ -886,9 +902,9 @@ input {
   color: white;
 }
 
-input:focus {
+/* input:focus {
   border: none;
-}
+} */
 
 .plantText {
   min-width: 500px;
@@ -1027,4 +1043,13 @@ input:focus {
 
 input:focus {
   outline: none;
+}
+
+.block {
+  padding: 10px;
+  margin: 0 10px 10px 0;
+}
+
+.comment_form {
+  margin: 10px;
 }

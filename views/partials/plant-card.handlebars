@@ -1,6 +1,6 @@
 
 <div class="flex justify-around "><!-- move div around the dom-->
-    <div class="cardPlant flex flex-col border-black box-border w-fit h-fit mb-5"> <!-- card div-->
+    <a href="/plants/{{id}}" class="cardPlant flex flex-col border-black box-border w-fit h-fit mb-5"> <!-- card div-->
         <div><!-- div for image and label for the image-->
             <figure class="relative"> 
                 <img class="plantimg" src="{{plant_img}}" width="500px" height="500px">
@@ -24,5 +24,5 @@
             </div>
                 {{/each}}
         </div> 
-    </div>
+    </a>
 </div>

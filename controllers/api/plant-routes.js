@@ -51,17 +51,18 @@ router.post("/addPlant", withAuth, async (req, res) => {
     res.status(400).json(error);
   }
 });
-router.post("/addPlant", withAuth, async (req, res) => {
-  try {
-    const plantData = await Plant.create({
-      title: req.body.title,
-      plant_img: req.body.plant_img,
-      problem: req.body.problem,
-      user_id: req.session.user_id,
-    });
-    res.status(200).json(plantData);
-  } catch (error) {
-    res.status(400).json(error);
-  }
-});
+// router.post("/addPlant", withAuth, async (req, res) => {
+//   console.log(req.session.user_id);
+//   try {
+//     const plantData = await Plant.create({
+//       title: req.body.title,
+//       plant_img: req.body.plant_img,
+//       problem: req.body.problem,
+//       user_id: req.session.user_id,
+//     });
+//     res.status(200).json(plantData);
+//   } catch (error) {
+//     res.status(400).json(error);
+//   }
+// });
 module.exports = router;
