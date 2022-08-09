@@ -28,9 +28,11 @@ router.get("/", async (req, res) => {
     res.status(500).json(error);
   }
 });
+
 router.get("/askAdvice", withAuth, (req, res) => {
   res.render("plant-form", { loggedIn: req.session.loggedIn });
 });
+
 router.get("/yourplants", withAuth, async (req, res) => {
   console.log(req.session);
   try {

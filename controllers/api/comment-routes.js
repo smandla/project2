@@ -36,7 +36,6 @@ router.post("/:plant_id/addComment", withAuth, async (req, res) => {
   }
 });
 router.post("/:id/votes/addVote", async (req, res) => {
-  // console.log(req.body.voted);
   try {
     const dataV = await Vote.findOne({
       where: {
@@ -44,8 +43,6 @@ router.post("/:id/votes/addVote", async (req, res) => {
         user_id: req.session.user_id,
       },
     });
-
-    console.log(dataV);
     if (!dataV) {
       const voteData = await Vote.create({
         voted: req.body.voted,
@@ -54,11 +51,9 @@ router.post("/:id/votes/addVote", async (req, res) => {
       });
       res.status(200).json({ like: true, voteData });
     } else {
-      console.log(dataV.dataValues);
       const destroyData = await Vote.destroy({ where: dataV.dataValues });
       res.status(200).json({ like: false, destroyData });
     }
-    // TODO: somehow update VoteCount in Comment
   } catch (error) {
     res.status(400).json(error);
   }
