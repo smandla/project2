@@ -52,6 +52,7 @@ router.post("/addPlant", withAuth, async (req, res) => {
     res.status(400).json(error);
   }
 });
+<<<<<<< HEAD
 // router.post("/addPlant", withAuth, async (req, res) => {
 //   console.log(
 //     req.body.title,
@@ -72,4 +73,3 @@ router.post("/addPlant", withAuth, async (req, res) => {
 //     res.status(400).json(error);
 //   }
 // });
-module.exports = router;

@@ -5,6 +5,8 @@ const { Plant, Comment, Vote, User } = require("../models");
 const withAuth = require("../utils/auth");
 console.log("hello I am no alive and breathing");
 
+/**TODO: add like obj to res.render for get by id route to plant-details */
+
 /** TODO: Render plants to homepage */
 router.get("/", async (req, res) => {
   try {
@@ -20,7 +22,7 @@ router.get("/", async (req, res) => {
     const plants = plantsData.map((plant) => plant.get({ plain: true }));
 
     // res.status(200).json(plants)
-    console.log("plants", plants.comments);
+    console.log("plants", plants);
     res.render("feed", { plants, loggedIn: req.session.loggedIn });
   } catch (error) {
     res.status(500).json(error);
@@ -80,9 +82,9 @@ router.get("/plants/:id", withAuth, async (req, res) => {
     });
     const plant = plantData.get({ plain: true });
     // res.status(200).json(plant);
-    res.render("plantdetails", {plant, loggedIn:req.session.loggedIn})
+    res.render("plantdetails", { plant, loggedIn: req.session.loggedIn });
   } catch (error) {
     res.status(500).json(error);
   }
-})
+});
 module.exports = router;
