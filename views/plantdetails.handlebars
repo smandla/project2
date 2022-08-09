@@ -46,7 +46,9 @@
                     <div class="comment" id={{comment.id}}>
                         <span class="pl-2">{{comment.user.username}}: </span> <!-- user -->
                         <span>{{comment.comment_text}}</span> <!-- comment-->
-                    <button id="vote"><i class="fa-regular fa-heart pt-1 pr-1"></i>{{comment.votes.length}}</button>
+                    <button id="vote">{{#if like}}<i class="fa-regular fa-heart pt-1 pr-1"></i>{{else}}
+                    <i class="fa-solid fa-heart"></i>{{/if}}
+                    {{comment.votes.length}}</button>
                 </div>
                 <div class="pl-2 commentbar text-xs border-white">
                     <span>{{format_date comment.createdAt}}</span> <!-- date posted-->

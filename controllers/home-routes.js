@@ -5,6 +5,8 @@ const { Plant, Comment, Vote, User } = require("../models");
 const withAuth = require("../utils/auth");
 console.log("hello I am no alive and breathing");
 
+/**TODO: add like obj to res.render for get by id route to plant-details */
+
 /** TODO: Render plants to homepage */
 router.get("/", async (req, res) => {
   try {
