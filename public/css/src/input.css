@@ -176,8 +176,8 @@ input {
 } */
 
 .plantText {
-  min-width: 500px;
-  max-width: 500px;
+  width: 500px;
+  width: 500px;
   box-sizing: border-box;
   background-color: #041e21;
   opacity: 75%;
@@ -319,3 +319,35 @@ input:focus {
   margin: 10px;
 }
 
+@media screen and (max-width: 768px) {
+  .cardPlant {
+    width: 280px;
+    height: 280px;
+    margin-bottom: 15rem;
+  }
+  .plantDiv {
+    top: auto;
+    bottom: auto;
+  }
+  .plantimg {
+    width: fit-content;
+    height: fit-content;
+  }
+  .plantText {
+    width: fit-content;
+    height: fit-content;
+    padding: 2px;
+  }
+  .main_header {
+    position: relative;
+    flex-direction: column;
+  }
+  .content {
+    padding: 0;
+  }
+
+  #myVideo {
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+}
