@@ -1,6 +1,5 @@
-
 <div class="flex justify-around "><!-- move div around the dom-->
-    <a href="/plants/{{id}}" class="cardPlant flex flex-col border-black box-border w-fit h-fit mb-5"> <!-- card div-->
+    <a href="/plants/{{id}}" class="cardPlant flex flex-col content-center border-black box-border w-fit h-fit mb-5"> <!-- card div-->
         <div><!-- div for image and label for the image-->
             <figure class="relative"> 
                 <img class="plantimg" src="{{plant_img}}">
@@ -14,15 +13,18 @@
                     <h3 class="text-md pl-1">Top Comment</h3>
                     <span class="text-xs pl-1 w-fit h-fit">{{format_date createdAt}}</span>
                 </div>
+                <span>
                 {{#each comments as |comment|}}
+                
+<div class="flex flex-row content-center align-center">
+                <div>
+                    <span class="block pl-1">{{comment.user.username}}: {{comment.comment_text}}</span><!--Top Comment -->
+                </div>
                 <span class="flex text-mdpr-1"><i class="fa-regular fa-heart pt-1 pr-1"></i>{{comment.voteCount}}</span>
-
-                <!--Likes Count -->
-            </div>
-            <div>
-                <span class="block pl-1">{{comment.user.username}}: {{comment.comment_text}}</span><!--Top Comment -->
-            </div>
+                </div>
                 {{/each}}
+                </span>
+            </div>
         </div> 
     </a>
 </div>

@@ -555,6 +555,10 @@ video {
   position: static;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -563,12 +567,16 @@ video {
   position: relative;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
 .left-0 {
   left: 0px;
 }
 
-.bottom-0 {
-  bottom: 0px;
+.float-right {
+  float: right;
 }
 
 .mb-5 {
@@ -611,8 +619,13 @@ video {
   width: fit-content;
 }
 
+
+.w-full {
+  width: 100%;
+}
 .w-1\/2 {
   width: 50%;
+
 }
 
 .flex-col {
@@ -651,6 +664,10 @@ video {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+
 .pl-1 {
   padding-left: 0.25rem;
 }
@@ -679,6 +696,10 @@ video {
   padding-right: 0.5rem;
 }
 
+.pl-10 {
+  padding-left: 2.5rem;
+}
+
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
@@ -705,7 +726,7 @@ video {
 
 * {
   --primary-green: #41a86d;
-  --black-opacity: rgba(0, 0, 0, 0.7);
+  --black-opacity: rgba(0, 0, 0, 0.8);
 }
 
 body {
@@ -730,7 +751,7 @@ body {
   width: 100%;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 400px) {
   #myVideo {
     -o-object-fit: cover;
        object-fit: cover;
@@ -757,9 +778,15 @@ body {
   cursor: pointer;
 }
 
-#myBtn:hover {
+/* #myBtn:hover {
   background: #ddd;
   color: black;
+} */
+
+main {
+  position: relative;
+  top: 120px;
+  height: 100%;
 }
 
 .main_header {
@@ -792,7 +819,7 @@ nav a,
   top: 150px;
   width: 100%;
   left: 0;
-  height: 100%;
+  /* height: 100%; */
 }
 
 .forms {
@@ -865,10 +892,10 @@ nav a,
   border-radius: 8px;
 }
 
-.btn:hover {
+/* .btn:hover {
   cursor: pointer;
   opacity: 0.7;
-}
+} */
 
 input {
   padding-left: 5px;
@@ -880,44 +907,9 @@ input {
   color: white;
 }
 
-input:focus {
+/* input:focus {
   border: none;
-}
-
-button {
-  margin: 25px 0 0 25px;
-}
-
-.hide {
-  display: none;
-}
-
-.time {
-  text-align: right;
-  position: absolute;
-  top: 3px;
-  right: 10px;
-  left: 0;
-  color: #335fb8;
-  z-index: 2;
-}
-
-.audio-progress {
-  height: 22px;
-  position: relative;
-  margin-top: 15px;
-  background-color: #e5eff1;
-}
-
-#progress {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 100%;
-  background-color: #006182;
-  z-index: 1;
-}
+} */
 
 .plantText {
   min-width: 500px;
@@ -930,9 +922,6 @@ button {
 #figPlant {
   background-color: #041e21;
   opacity: 75%;
-}
-
-@media screen and (max-width: 1150px) {
 }
 
 .plantimg {
@@ -958,28 +947,6 @@ button {
   cursor: pointer;
 }
 
-.advice_form {
-  /* margin: 1rem; */
-  /* background: var(--black-opacity); */
-  padding: 10px;
-  border-radius: 1rem;
-  /* display: flex; */
-  justify-content: center;
-  width: 100%;
-  margin: 0 auto;
-  height: 100%;
-  /* background: var(--black-opacity); */
-}
-
-/* .advice_form input {
-  background: rgba(100, 129, 102, 0.5);
-  margin: 10px;
-  width: 95%;
-  border: none;
-  display: flex;
-  border-radius: 8px;
-} */
-
 .data {
   /* background: var(--black-opacity); */
   display: flex;
@@ -991,6 +958,8 @@ button {
 
 .userPlant {
   margin: 1rem;
+  background: white;
+  border-radius: 8px;
 }
 
 #plantDetails {
@@ -1025,13 +994,26 @@ button {
 
 .userplantimg {
   /* position: absolute; */
+  background: white;
+  border-radius: 8px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
-  border-radius: 8px;
   width: 300px;
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.userplantimg:hover {
+  opacity: 0.7;
+}
+
+.post_btn {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .advice {
@@ -1039,15 +1021,19 @@ button {
   /* justify-content: center; */
   background: var(--black-opacity);
   width: 50%;
+  height: 150%;
   margin: 0 auto;
   padding: 10px;
   color: white;
+  border-radius: 8px;
 }
 
 .plantDiv {
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  display: block;
+
+  /* flex-direction: column; */
+
   justify-content: center;
   top: 113px;
   bottom: 0;
@@ -1055,6 +1041,7 @@ button {
   overflow-y: scroll;
   overflow-x: hidden;
 }
+
 
 /* figure img {
   width: 500px;
@@ -1091,3 +1078,24 @@ button {
        object-fit: cover;
   }
 }
+
+.advice_input {
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.block {
+  padding: 10px;
+  margin: 0 10px 10px 0;
+}
+
+.comment_form {
+  margin: 10px;
+}
+

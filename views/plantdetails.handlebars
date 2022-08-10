@@ -1,5 +1,5 @@
 {{#with plant}}
-<div class="flex"> <!-- div to move on the dom-->
+<div class="flex" > <!-- div to move on the dom-->
     <div class="flex justify-between"> <!-- div holding the two page objects details and comments-->
         <div id="plantDetails" class="flex bg-black ml-6 pb-8"> <!-- details with image and plant details-->
             <figure class="pl-2 pt-2 pr-2">
@@ -30,7 +30,7 @@
             </div>
         </div>
         <div id="allComments" class="flex flex-col bg-black mr-6"> <!-- comment section-->
-            <div class="flex">
+            <div class="flex ">
                 <div class="block pr-1">
                     <span class="detailHeader text-yellow-400 pl-2 pt-1 justify-between ">OP: {{user.username}}<br></span> <!--op user -->
                     
@@ -40,26 +40,35 @@
                 </div>
             </div>
             
-            <div class="block">
-                <div>
+            <div class=" ">
+                <div class="w-full">
                     {{#each comments as |comment|}}
+                
+              <div class="comment" id={{comment.id}}>
                         <span class="pl-2">{{comment.user.username}}: </span> <!-- user -->
                         <span>{{comment.comment_text}}</span> <!-- comment-->
-                    
-                </div>
-                <div class="pl-2 commentbar text-xs border-white">
+                    <button id="vote" class=" fixed float-right pl-10 justify-right align-right" >{{#if like}}<i class="fa-regular fa-heart pt-1 pr-1"></i>{{else}}
+                    <i class="fa-solid fa-heart"></i>{{/if}}
+                    {{comment.votes.length}}</button>
+               </div> 
+                  <div class="pl-2 commentbar text-xs border-white">
                     <span>{{format_date comment.createdAt}}</span> <!-- date posted-->
-                </div>
-                    {{/each}}
-            </div>
-            <div> <!--comment div -->
-                <form>
-                    <input type="text" placeholder="Add Comment" id="comment-sub-text">
-                    <button class="btn btn-primary " id="comment-submit">Post</button>
+                </div> 
+                
+                    {{/each}} 
+                    </div>
+                      <div> <!--comment div -->
+                <form class="comment_form">
+                    <input type="text" placeholder="Add Comment" id="comment-sub-text"> 
+                     <button class="btn btn-primary " id="comment-submit">Post</button>
                 </form>
             </div>
+            </div>
+          
             
         </div>
     </div>
 </div>
 {{/with}}
+<script src="/js/vote-comment.js"></script>
+<script src="/js/comment.js"></script>
