@@ -311,6 +311,11 @@ input:focus {
   margin: 0 10px 10px 0;
 }
 
+.main {
+  display: flex;
+}
+
 .comment_form {
   margin: 10px;
 }
+
