@@ -619,13 +619,16 @@ video {
   width: fit-content;
 }
 
+.w-1\/2 {
+  width: 50%;
+}
 
 .w-full {
   width: 100%;
 }
-.w-1\/2 {
-  width: 50%;
 
+.flex-row {
+  flex-direction: row;
 }
 
 .flex-col {
@@ -912,8 +915,7 @@ input {
 } */
 
 .plantText {
-  min-width: 500px;
-  max-width: 500px;
+  width: 500px;
   box-sizing: border-box;
   background-color: #041e21;
   opacity: 75%;
@@ -1031,52 +1033,13 @@ input {
 .plantDiv {
   width: 100%;
   display: block;
-
   /* flex-direction: column; */
-
   justify-content: center;
   top: 113px;
   bottom: 0;
   position: fixed;
   overflow-y: scroll;
   overflow-x: hidden;
-}
-
-
-/* figure img {
-  width: 500px;
-  height: 500px;
-} */
-
-@media screen and (max-width: 768px) {
-  .cardPlant {
-    width: 200px;
-    height: 200px;
-  }
-  .plantDiv {
-    top: auto;
-    bottom: auto;
-  }
-  .plantimg {
-    width: fit-content;
-    height: fit-content;
-  }
-  .plantText {
-    width: fit-content;
-    height: fit-content;
-  }
-  .main_header {
-    position: relative;
-    flex-direction: column;
-  }
-  .content {
-    padding: 0;
-  }
-
-  #myVideo {
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
 }
 
 .advice_input {
@@ -1095,7 +1058,56 @@ input:focus {
   margin: 0 10px 10px 0;
 }
 
+.main {
+  display: flex;
+}
+
 .comment_form {
   margin: 10px;
 }
 
+@media screen and (max-width: 768px) {
+  .cardPlant {
+    width: 280px;
+    height: 280px;
+    margin-bottom: 15rem;
+  }
+
+  .plantDiv {
+    top: auto;
+    bottom: auto;
+  }
+
+  .plantimg {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+
+  .plantText {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 2px;
+  }
+
+  .main_header {
+    position: relative;
+    flex-direction: column;
+  }
+
+  .content {
+    padding: 0;
+  }
+
+  #myVideo {
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+}
