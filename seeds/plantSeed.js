@@ -336,11 +336,5 @@ async function seedPlant(){
 }
 
 
-/*  for (const plant of plantSeedData){
-        const newPlant = await Plant.create({
-            ...plant,
-            user_id: users[Math.floor(Math.random() * users.length)].id
-        })
-    } */
 
 module.exports = seedPlant

@@ -133,7 +133,7 @@ nav a,
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: red; */
+  
 }
 .btn {
   border: none;
@@ -143,10 +143,7 @@ nav a,
   font-size: 1.25rem;
   border-radius: 8px;
 }
-/* .btn:hover {
-  cursor: pointer;
-  opacity: 0.7;
-} */
+
 input {
   padding-left: 5px;
   border: none;
@@ -156,9 +153,7 @@ input {
   font-size: 1.5rem;
   color: white;
 }
-/* input:focus {
-  border: none;
-} */
+
 
 .plantText {
   width: 500px;
@@ -196,7 +191,7 @@ input {
 }
 
 .data {
-  /* background: var(--black-opacity); */
+  
   display: flex;
   width: 90%;
   margin: 0 auto;
@@ -240,7 +235,7 @@ input {
 }
 
 .userplantimg {
-  /* position: absolute; */
+  
   background: white;
   border-radius: 8px;
   border-bottom-left-radius: 8px;
@@ -260,8 +255,7 @@ input {
   align-items: center;
 }
 .advice {
-  /* display: flex; */
-  /* justify-content: center; */
+  
   background: var(--black-opacity);
   width: 50%;
   height: 150%;
@@ -273,7 +267,7 @@ input {
 .plantDiv {
   width: 100%;
   display: block;
-  /* flex-direction: column; */
+  
 
   justify-content: center;
   top: 113px;

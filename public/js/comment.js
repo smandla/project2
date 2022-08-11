@@ -6,7 +6,7 @@ async function commentFormHandler(event) {
   const post_id = window.location.toString().split("/")[
     window.location.toString().split("/").length - 1
   ];
-  console.log();
+  
   if (comment_text) {
     const response = await fetch(`/api/comments/${post_id}/addComment`, {
       method: "POST",
@@ -17,7 +17,7 @@ async function commentFormHandler(event) {
         "Content-Type": "application/json",
       },
     });
-    console.log(response);
+    
 
     if (response.ok) {
       document.location.reload();

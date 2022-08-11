@@ -1,4 +1,4 @@
-// import models
+
 const Plant = require("./Plant");
 const Comment = require("./Comment");
 const User = require("./User");

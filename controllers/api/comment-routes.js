@@ -5,7 +5,7 @@ const voteRoutes = require("./vote-routes");
 const withAuth = require("../../utils/auth");
 
 router.get("/:plant_id/comments", withAuth, async (req, res) => {
-  console.log(req.params.plant_id);
+  
   try {
     const commentsData = await Comment.findAll({
       where: {
@@ -29,7 +29,7 @@ router.post("/:id/addComment", withAuth, async (req, res) => {
       user_id: req.session.user_id,
       plant_id: req.params.id,
     });
-    console.log(commentData);
+    
     res.status(200).json(commentData);
   } catch (error) {
     res.status(400).json(error);
