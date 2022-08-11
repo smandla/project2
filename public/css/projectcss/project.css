@@ -400,10 +400,6 @@ object {
   /* 2 */
 }
 
-/*
-Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
-*/
-
 img,
 video {
   max-width: 100%;
@@ -1069,14 +1065,10 @@ input:focus {
 @media screen and (max-width: 768px) {
   .cardPlant {
     width: 280px;
-    height: 280px;
+    height: fit-content;
     margin-bottom: 15rem;
   }
 
-  .plantDiv {
-    top: auto;
-    bottom: auto;
-  }
 
   .plantimg {
     width: -webkit-fit-content;
@@ -1100,6 +1092,9 @@ input:focus {
   .main_header {
     position: relative;
     flex-direction: column;
+    z-index: 1;
+    /* opacity: 1; */
+    background: black;
   }
 
   .content {
