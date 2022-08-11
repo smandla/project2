@@ -1,15 +1,48 @@
 # Rooting For You
 
-### [Live Page]()
+### [Live Page](https://rooting-for-youu.herokuapp.com/)
 
 ## Description
+The application uses a mysql database to hold information related to the RootingForYou users post data, commment data, vote data, and login credentials. It has a home screen that shows all users posts and a nav bar that brings the users to a user login page, your own plants, or a get advice page that you can use to make a post. If a user is logged in they can click on a post and view more details, see the original posters problem, and like and comment other peoples comments. The project was a group effort that was meant for us to better understand and use mysql and relationships.
+
+Relationships:
+
+USERS has many Plants <br>
+USERS has many Comments<br>
+USERS has many Votes<br>
+
+PLANTS belong to many Users<br>
+PLANTS has many Votes<br>
+PLANTS has many comments<br>
+
+VOTE belongs to a Plant<br>
+VOTE belongs to a User<br>
+
+COMMENT belongs to a User<br>
+COMMENT belongs to a Plant
 
 (see [Credits](#credits)).
 
 Unifying and omtivating these features is the following simple user story:
 
 ```md
+AS A USER I want to add a plant post with and seek help from other plant people
+So that I can go and post a plant with information about my plant
 
+AS A USER I want to like a comment  
+So that I can view a post's highest rated comment and comment any comment for that post
+
+AS A USER I want to login or create a new user
+So that I can view my own plants and add plant posts
+
+AS A USER I want to view all my plants
+So that I can see users comments, likes, and view details of the plant
+
+AS A USER I want to view all users plants 
+So that I can go to the home screen and view everyone else's posts
+
+AS A USER I want to be logged in to see my personal content
+So that I feel safer as a user and more secure
 ```
 
 ## Table of Contents
@@ -25,14 +58,23 @@ Unifying and omtivating these features is the following simple user story:
 
 ---
 
-## Installation
+To work together as a team and develop an application that uses a mysql database.
 
-Clone repository and run on local machine or use deployed link above
+## Installation
+Visit the deployed link 
+
+Or
+
+Clone repository and run on local machine <br>
+have mysql installed<br>
+Using node do an npm i<br>
+do a npm run seed<br>
+run the server on your localhost
 
 ## Usage
 
 On page initialization, the page will look like the following:
-![alt text](assets/images/screenshot.png)
+![Home Page](assets/images/screenshot.png)
 
 ---
 
@@ -41,37 +83,22 @@ On page initialization, the page will look like the following:
 In addition to displaying various pieces of information, the site includes several features to improve user experience by handling edge cases and making the site more intuitive. Each of these features have been designed in terms of user needs.
 
 ```md
-GIVEN I am
+GIVEN I am User
 
-WHEN
-THEN
+WHEN I like a comment
+THEN I can unlike that comment
 
-WHEN  
-THEN
+WHEN I create an account
+THEN I must have a password that is atleast 8 characters long
 
-WHEN
-THEN
+WHEN I want to mute the background noise
+THEN I can click the sound Icon
 
-WHEN
-THEN
+WHEN I want to view the site on a different device
+THEN The website is responsive
 
-WHEN
-THEN
-
-WHEN
-THEN
-
-WHEN
-THEN
-
-WHEN
-THEN
-
-WHEN
-THEN
-
-WHEN
-THEN
+WHEN I make a new account 
+THEN my password is hashed for better security
 ```
 
 ---
@@ -81,8 +108,8 @@ THEN
 ### Created by:
 
 [Kavya Mandla](https://github.com/smandla)  
-[Jonathan Mengel](https://github.com/)  
-[Daniel Stefani](https://github.com/)
+[Jonathan Mengel](https://github.com/digggggg)  
+[Daniel Stefani](https://github.com/DStefani86)
 
 ### With the Help of:
 
