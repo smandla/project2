@@ -6,7 +6,7 @@ async function newFormHandler(event) {
   const image_url = document.getElementById("img-url").value;
 
   if (title && post_content && image_url) {
-    console.log(title, post_content, image_url);
+    
     const response = await fetch(`/api/plants/addPlant`, {
       method: "POST",
       body: JSON.stringify({
@@ -18,7 +18,7 @@ async function newFormHandler(event) {
         "Content-Type": "application/json",
       },
     });
-    console.log(response);
+    
     if (response.ok) {
       document.location.replace("/");
     } else {

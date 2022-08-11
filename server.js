@@ -37,9 +37,4 @@ sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`Server is now up localhost:${PORT}`));
 });
 
-// app.get("/", (req, res) => {
-//   console.log("hello");
-//   res.send("wdecew");
-// });
 
-// app.listen(PORT, () => console.log("running at 3001 port"));

@@ -20,7 +20,7 @@ Plant.init(
     },
     plant_img: {
       type: DataTypes.TEXT,
-      // allowNull: false,
+      
     },
     title: {
       type: DataTypes.STRING,
@@ -65,4 +65,4 @@ Plant.init(
 
 module.exports = Plant;
 
-// Problem (optional)
+

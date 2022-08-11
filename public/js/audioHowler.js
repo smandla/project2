@@ -4,7 +4,7 @@ var sound = new Howl({
   loop: true,
   volume: 0.2,
   onplay: function () {
-    console.log("playing...");
+    
   },
 });
 let muteBtnEl = document.querySelector(".mute");
@@ -16,7 +16,7 @@ sound.once("load", function () {
 });
 
 muteBtnEl.addEventListener("click", function () {
-  console.log("in mute button");
+  
   sound.mute(true);
   muteBtnEl.style.display = "none";
   unmuteBtnEl.style.display = "inline";

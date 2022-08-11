@@ -7,6 +7,4 @@ router.use("/user", userRoutes);
 router.use("/plants", plantRoutes);
 router.use("/comments", commentRoutes);
 
-//commentRoutes
-//voteRoutes
 module.exports = router;
