@@ -74,7 +74,13 @@ run the server on your localhost
 ## Usage
 
 On page initialization, the page will look like the following:
-![Home Page](assets/images/screenshot.png)
+![Home Page](https://github.com/smandla/rootingForYou/blob/main/gifs/RFUHomepage.gif)<br>
+Login Functionality:<br>
+![Login Page](https://github.com/smandla/rootingForYou/blob/main/gifs/RFULoginfunctionality.gif)<br>
+View Your Plants Functionality:<br>
+![View Your Plants Page](https://github.com/smandla/rootingForYou/blob/main/gifs/RFU%20ViewYourPlantsFunction.gif)<br>
+Post Functionality:<br>
+![Post Page](https://github.com/smandla/rootingForYou/blob/main/gifs/RFUPostFunction.gif)<br>
 
 ---
 
